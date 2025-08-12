@@ -21,6 +21,7 @@ function App() {
             <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/login" element={<Login />} />
             <Route path="/listarcategorias" element={<ListaCategoria />} />
+            <Route path="/editarcategoria/:id" element={<ListaCategoria />} />
           </Routes>
         </div>
         <Footer />
