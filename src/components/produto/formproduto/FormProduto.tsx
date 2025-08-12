@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useContext, useEffect, useState, type ChangeEvent } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-
 import { RotatingLines } from "react-loader-spinner";
 import { AuthContext } from "../../../context/AuthContext";
 import type Categoria from "../../../models/Categoria";
@@ -93,7 +92,7 @@ function FormProduto() {
     }
 
     function retornar() {
-        navigate('/produto');
+        navigate('/listaproduto');
     }
 
     async function gerarNovoProduto(e: ChangeEvent<HTMLFormElement>) {

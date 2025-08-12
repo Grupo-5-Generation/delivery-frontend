@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useContext, useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-
-
 import { RotatingLines } from "react-loader-spinner"
 import { AuthContext } from "../../../context/AuthContext"
 import type Produto from "../../../models/Produto"
@@ -74,7 +72,7 @@ function DeletarProduto() {
     }
 
     function retornar() {
-        navigate("/produto")
+        navigate("/listaproduto")
     }
     
     return (
