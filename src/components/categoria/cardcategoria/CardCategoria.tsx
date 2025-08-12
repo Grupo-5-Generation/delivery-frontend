@@ -31,6 +31,7 @@ function CardCategoria({ categoria}: CardCategoriaProps) {
                     flex items-center justify-center'>
                     <button>Deletar</button>
                 </Link>
+
             </div>
         </div>
     )
