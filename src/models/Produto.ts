@@ -1,7 +1,7 @@
 import type Categoria from './Categoria';
 import type Usuario from './Usuario';
 
-export default interface Postagem {
+export default interface Produto{
   id: number;
   nome: string;
   quantidade: number;

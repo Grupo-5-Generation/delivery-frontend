@@ -106,6 +106,17 @@ function FormCategoria() {
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
         </div>
+        <div className="flex flex-col gap-2">
+          <label htmlFor="tipo">Tipo da Categoria</label>
+          <input
+            type="text"
+            placeholder="Descreva o tipo da sua Categoria"
+            name="tipo"
+            className="border-2 border-slate-700 rounded p-2"
+            value={categoria.tipo}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+          />
+        </div>
         <button
           className="rounded text-slate-100 bg-indigo-400 
                                hover:bg-indigo-800 w-1/2 py-2 mx-auto flex justify-center"

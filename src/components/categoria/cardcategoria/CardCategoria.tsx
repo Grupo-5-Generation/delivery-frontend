@@ -15,6 +15,7 @@ function CardCategoria({ categoria}: CardCategoriaProps) {
             </header>
            
             <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.descricao}</p>
+            <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.tipo}</p>
             
             
             <div className="flex">
