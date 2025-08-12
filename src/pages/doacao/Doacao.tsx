@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
+import { ToastAlerta } from "../../utils/ToastAlesta";
 
 function Doacao() {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ function Doacao() {
 
   useEffect(() => {
     if (usuario.token === "") {
-      alert("Você precisa estar logado");
+      ToastAlerta('Você precisa estar logado!', 'info')
       navigate("/");
     }
   }, [usuario.token]);

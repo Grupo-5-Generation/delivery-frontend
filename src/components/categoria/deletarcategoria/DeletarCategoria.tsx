@@ -4,6 +4,7 @@ import { buscar, deletar } from "../../../services/Service"
 import { RotatingLines } from "react-loader-spinner"
 import type Categoria from "../../../models/Categoria"
 import { AuthContext } from "../../../context/AuthContext"
+import { ToastAlerta } from "../../../utils/ToastAlesta"
 
 function DeletarCategoria() {
 
@@ -33,7 +34,7 @@ function DeletarCategoria() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado')
+            ToastAlerta('Você precisa estar logado!', 'info')
             navigate('/')
         }
     }, [token])
@@ -53,14 +54,12 @@ function DeletarCategoria() {
                     'Authorization': token
                 }
             })
-
-            alert('Categoria apagada com sucesso')
-
+            ToastAlerta("Categoria apagada com sucesso!", "sucesso")
         } catch (error: any) {
             if (error.toString().includes('401')) {
                 handleLogout()
             }else {
-                alert('Erro ao deletar a categoria.')
+                ToastAlerta("Erro ao deletar a categoria.", "erro")
             }
         }
 
