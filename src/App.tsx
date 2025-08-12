@@ -6,6 +6,7 @@ import Navbar from "./components/navbar/Navbar";
 import { AuthProvider } from "./context/AuthContext";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
+import ListaCategoria from "./components/categoria/listacategoria/ListaCategoria";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/listarcategorias" element={<ListaCategoria />} />
           </Routes>
         </div>
         <Footer />

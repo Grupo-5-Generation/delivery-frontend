@@ -11,7 +11,7 @@ function Navbar() {
                         <Link to='/home' className='rounded-md px-2 hover:bg-[#275292]'>Home</Link>
                         {/* <Link to='/funcionarios' className='hover:bg-amber-500'> Cadastrar Funcionários</Link> */}
                         <Link to='/listarfuncionarios' className='rounded-md px-2 hover:bg-[#275292]'>Funcionários </Link>
-                        <Link to='/listarsetores' className='rounded-md px-2 hover:bg-[#275292]'>Setores</Link>
+                        <Link to='/listarcategorias' className='rounded-md px-2 hover:bg-[#275292]'>Categoria</Link>
                         {/* <Link to='/setores' className='hover:bg-amber-500'> Cadastrar Setor</Link> */}
                         <Link to='/login' className='rounded-md px-2 hover:bg-[#275292]'>Sair<i className="fa fa-sign-out pl-2 text-white text-base p-1"></i></Link>
                         
