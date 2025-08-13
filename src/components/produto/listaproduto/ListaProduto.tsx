@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { useContext, useEffect, useState } from "react";
-import { DNA } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext";
 import type Produto from "../../../models/Produto";
@@ -43,12 +43,14 @@ function ListaProduto() {
         <div className="max-w-7xl mx-auto px-4 py-6 text-green-950">
             {produto.length === 0 ? (
                 <div className="flex items-center justify-center min-h-[300px]">
-                    <DNA
-                        visible={true}
-                        height="200"
-                        width="200"
-                        ariaLabel="oval-loading"
-                    />
+                    <div className="w-48 h-48">
+                        <DotLottieReact
+                            src="https://lottie.host/862431d3-1226-4b15-a706-640cb147eba3/xMBPARvpSA.lottie"
+                            loop
+                            autoplay
+                            speed={2.3}
+                        />
+                    </div>
                 </div>
             ) : (
                 <div className="bg-white shadow w-full">

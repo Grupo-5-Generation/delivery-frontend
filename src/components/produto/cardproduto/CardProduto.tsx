@@ -41,7 +41,7 @@ function CardProduto({ produto}: CardProdutoProps) {
     return (
         <tr className="border-b hover:bg-gray-50 text-green-950">
     
-       <td className="px-4 py-3">
+        <td className="px-4 py-3">
             <div className="relative inline-block text-left">
             <details className="group">
                 <summary className="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-300">
