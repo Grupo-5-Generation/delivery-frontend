@@ -34,7 +34,7 @@ function Login() {
 
   return (
     <>
-    <div className="bg-[url(https://ik.imagekit.io/maridevdata/Fundo%20de%20Tela.png?updatedAt=1755115852401)]">
+    <div className="">
       <div
         className="flex flex-col 
                     h-screen place-items-center font-bold bg-[#434522]/30 py-50 
