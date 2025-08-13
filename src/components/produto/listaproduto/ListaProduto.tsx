@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { DNA } from "react-loader-spinner";
-import { buscar } from "../../../services/Service";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext";
 import type Produto from "../../../models/Produto";
+import { buscar } from "../../../services/Service";
 import { ToastAlerta } from "../../../utils/ToastAlesta";
 import CardProduto from "../cardproduto/CardProduto";
 
@@ -57,7 +57,7 @@ function ListaProduto() {
                 />
             )}
        
-            <div className="overflow-x-auto bg-white shadow">
+            <div className="bg-white shadow w-full">
                 <table className="min-w-full text-sm text-left text-gray-700">
                 <thead className=" bg-[#434522] text-white">
                     <tr>
