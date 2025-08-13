@@ -4,7 +4,7 @@ function Home() {
   return (
     <>
       {/* Seção 1 - Banner */}
-      <div className="bg-[url(https://ik.imagekit.io/maridevdata/Terminal%20Gourmet.png?updatedAt=1755023249713)] bg-no-repeat bg-cover p-60 shadow opacity-90 animate-[zoomIn_3s_ease_forwards]">
+      <div className="bg-[url(https://ik.imagekit.io/maridevdata/Terminal%20Gourmet.png?updatedAt=1755023249713)] overflow-hidden bg-no-repeat bg-cover p-60 shadow opacity-90 animate-[zoomIn_3s_ease_forwards]">
         <div className="flex flex-col gap-5 text-right">
           <div className="flex justify-end mx-15 p-4 text-orange-400 font-bold">
             <div className="flex">
@@ -32,58 +32,59 @@ function Home() {
 
         <div className="max-w-3xl max-h-1/2 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pb-26">
           {/* Card 1 */}
-          <div className="bg-[#434522] rounded-lg shadow-lg p-2 text-white flex flex-col items-center">
+          <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center">
             <img
               src="https://ik.imagekit.io/maridevdata/Prato%20Saudavel2.jpg?updatedAt=1755026274300"
               alt="Sofisticada"
               className="w-60 h-30 rounded-md mb-4 flex items-center justify-center"
             />
             <h2 className="text-lg font-semibold mb-2">Sofisticada</h2>
-            <p className="text-sm text-gray-200 text-center">
+            <p className="text-sm text-white text-center">
               Corpo de texto para adicionar mais informações, além do subtítulo.
             </p>
           </div>
 
           {/* Card 2 */}
-          <div className="bg-[#434522] rounded-lg shadow-lg p-6 text-white flex flex-col items-center">
-            <div className="w-24 h-24 bg-[#f0a382] rounded-md mb-4 flex items-center justify-center">
-              <FaBuilding size={40} />
-            </div>
-            <h2 className="text-lg font-semibold mb-2">Cadastro de setores</h2>
-            <p className="text-sm text-gray-200 text-center">
-              Corpo de texto para outras informações que você queira
-              compartilhar.
+          <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center">
+            <img
+              src="https://ik.imagekit.io/maridevdata/Foto%20Saudavel.jpeg?updatedAt=1755025581337"
+              alt="Saudável"
+              className="w-60 h-30 rounded-md mb-4 flex items-center justify-center"
+            />
+            <h2 className="text-lg font-semibold mb-2">Saudável</h2>
+            <p className="text-sm text-white text-center">
+              Corpo de texto para adicionar mais informações, além do subtítulo.
             </p>
           </div>
 
           {/* Card 3 */}
-          <div className="bg-[#434522] rounded-lg shadow-lg p-6 text-white flex flex-col items-center">
-            <div className="w-24 h-24 bg-[#f0a382] rounded-md mb-4 flex items-center justify-center">
-              <FaMoneyBillWave size={40} />
-            </div>
-            <h2 className="text-lg font-semibold mb-2">
-              Função de aumento salarial
-            </h2>
-            <p className="text-sm text-gray-200 text-center">
-              Corpo de texto para explicar melhor o ponto principal.
+          <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center">
+            <img
+              src="https://ik.imagekit.io/maridevdata/Prato%20Saboroso.jpeg?updatedAt=1755025581293"
+              alt="Sofisticada"
+              className="w-60 h-30 rounded-md mb-4 flex items-center justify-center"
+            />
+            <h2 className="text-lg font-semibold mb-2">Sofisticada</h2>
+            <p className="text-sm text-white text-center">
+              Corpo de texto para adicionar mais informações, além do subtítulo.
             </p>
           </div>
         </div>
       </div>
 
       {/* Seção 4 - Texto, imagem e clientes */}
-      <div className="grid grid-cols-2 gap-4 pt-26 bg-amber-500">
+      <div className="grid grid-cols-2 gap-4 pt-26 bg-[#a4a78e] ">
         {/* Texto */}
         <div className="text-sky-900 text-3xl p-25 text-center text-shadow-xs font-bold flex items-center justify-center">
-          <p>Pede uma marmita aí.</p>
+          <p>Faça seu pedido</p>
         </div>
 
         {/* Imagem */}
         <div className="flex justify-center items-center ">
           <img
-            src="https://ik.imagekit.io/vtdzeofuq/imagemfundoazulclaro.png?updatedAt=1754664518621"
+            src="https://ik.imagekit.io/maridevdata/Restaurante%20Home.jpg?updatedAt=1755106030159"
             alt="Foto da div"
-            className="w-[500px] h-[300px] object-contain"
+            className="w-[500px] h-[380px] mx-10 object-contain"
           />
         </div>
       </div>
@@ -95,7 +96,7 @@ function Home() {
         </h2>
         <div className="grid grid-cols-5 gap-4 pl-55">
           {/* Cliente 1 */}
-          <div className="bg-[#434522] rounded-lg shadow-lg p-2 text-white flex flex-col items-center hover:opacity-55">
+          <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center hover:opacity-55">
             <img
               src="https://ik.imagekit.io/zddqh4rhi/homi_2.png?updatedAt=1755099394672"
               alt="Imagem cliente 1"
@@ -108,7 +109,7 @@ function Home() {
           </div>
 
           {/* Cliente 2 */}
-          <div className="bg-[#434522] rounded-lg shadow-lg p-2 text-white flex flex-col items-center hover:opacity-55">
+          <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center hover:opacity-55">
             <img
               src="https://ik.imagekit.io/zddqh4rhi/homi_3.png?updatedAt=1755099481795"
               alt="Imagem cliente 2"
@@ -121,7 +122,7 @@ function Home() {
           </div>
 
           {/* Cliente 3 */}
-          <div className="bg-[#434522] rounded-lg shadow-lg p-2 text-white flex flex-col items-center hover:opacity-55">
+          <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center hover:opacity-55">
             <img
               src="https://ik.imagekit.io/zddqh4rhi/muie_1.png?updatedAt=1755099619412"
               alt="Imagem cliente 3"
