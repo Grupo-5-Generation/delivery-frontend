@@ -45,7 +45,7 @@ function ListaProduto() {
     }, [produto.length])
 
     return (
-        <>
+        <div className="max-w-7xl mx-auto px-4 py-6 text-sky-900">
             {produto.length === 0 && (
                 <DNA
                     visible={true}
@@ -56,18 +56,32 @@ function ListaProduto() {
                     wrapperClass="dna-wrapper mx-auto"
                 />
             )}
-            <div className="flex justify-center w-full my-4">
-                <div className="container flex flex-col mx-2">
-                    <div className='container mx-auto my-4 
-                        grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'
-                    >
-                        {produto.map((produto) => (
-                            <CardProduto key={produto.id} produto={produto} />
-                        ))}
-                    </div>
-                </div>
+       
+            <div className="overflow-x-auto bg-white shadow">
+                <table className="min-w-full text-sm text-left text-gray-700">
+                <thead className=" bg-[#434522] text-white">
+                    <tr>
+                    <th scope="col" className="px-4 py-3">Ações</th>  
+                    <th scope="col" className="px-4 py-3">Nome</th>
+                    <th scope="col" className="px-4 py-3">Quantidade</th>
+                    <th scope="col" className="px-4 py-3">Preço Atual </th>
+                    <th scope="col" className="px-4 py-3">Desconto</th>
+                    <th scope="col" className="px-4 py-3">Preço com desconto </th>
+                    <th scope="col" className="px-4 py-3">Categoria</th>
+                    <th scope="col" className="px-4 py-3">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {produto.map((produto) => (
+                    <CardProduto
+                        key={produto.id}
+                        produto={produto}
+                    />
+                    ))}
+                </tbody>
+                </table>
             </div>
-        </>
+        </div>     
     );
 }
 
