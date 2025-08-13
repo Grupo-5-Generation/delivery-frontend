@@ -13,6 +13,9 @@ function CardProduto({ produto}: CardProdutoProps) {
     const [produtoDesconto, setProdutoDesconto] = useState<Produto>(
         {} as Produto
 
+
+
+        
     );
       const navigate = useNavigate();
 
