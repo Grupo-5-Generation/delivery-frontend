@@ -8,13 +8,9 @@ import { buscar } from "../../../services/Service";
 import { ToastAlerta } from "../../../utils/ToastAlesta";
 import CardProduto from "../cardproduto/CardProduto";
 
-
 function ListaProduto() {
-
     const navigate = useNavigate();
-
     const [produto, setProduto] = useState<Produto[]>([]);
-
     const { usuario, handleLogout } = useContext(AuthContext);
     const token = usuario.token;
 
@@ -24,64 +20,63 @@ function ListaProduto() {
                 headers: {
                     Authorization: token,
                 },
-            })
-
+            });
         } catch (error: any) {
             if (error.toString().includes('401')) {
-                handleLogout()
+                handleLogout();
             }
         }
     }
 
     useEffect(() => {
         if (token === '') {
-            ToastAlerta('Você precisa estar logado!', 'info')
+            ToastAlerta('Você precisa estar logado!', 'info');
             navigate('/');
         }
-    }, [token])
+    }, [token]);
 
     useEffect(() => {
-        buscarProduto()
-    }, [produto.length])
+        buscarProduto();
+    }, [produto.length]);
 
     return (
-        <div className="max-w-7xl mx-auto px-4 py-6 text-sky-900">
-            {produto.length === 0 && (
-                <DNA
-                    visible={true}
-                    height="200"
-                    width="200"
-                    ariaLabel="dna-loading"
-                    wrapperStyle={{}}
-                    wrapperClass="dna-wrapper mx-auto"
-                />
-            )}
-       
-            <div className="bg-white shadow w-full">
-                <table className="min-w-full text-sm text-left text-gray-700">
-                <thead className=" bg-[#434522] text-white">
-                    <tr>
-                    <th scope="col" className="px-4 py-3">Ações</th>  
-                    <th scope="col" className="px-4 py-3">Nome</th>
-                    <th scope="col" className="px-4 py-3">Quantidade</th>
-                    <th scope="col" className="px-4 py-3">Preço Atual </th>
-                    <th scope="col" className="px-4 py-3">Desconto</th>
-                    <th scope="col" className="px-4 py-3">Preço com desconto </th>
-                    <th scope="col" className="px-4 py-3">Categoria</th>
-                    <th scope="col" className="px-4 py-3">Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {produto.map((produto) => (
-                    <CardProduto
-                        key={produto.id}
-                        produto={produto}
+        <div className="max-w-7xl mx-auto px-4 py-6 text-green-950">
+            {produto.length === 0 ? (
+                <div className="flex items-center justify-center min-h-[300px]">
+                    <DNA
+                        visible={true}
+                        height="200"
+                        width="200"
+                        ariaLabel="oval-loading"
                     />
-                    ))}
-                </tbody>
-                </table>
-            </div>
-        </div>     
+                </div>
+            ) : (
+                <div className="bg-white shadow w-full">
+                    <table className="w-full text-sm text-left text-gray-700">
+                        <thead className="bg-[#434522] text-white">
+                            <tr>
+                                <th scope="col" className="px-4 py-3">Ações</th>  
+                                <th scope="col" className="px-4 py-3">Nome</th>
+                                <th scope="col" className="px-4 py-3">Quantidade</th>
+                                <th scope="col" className="px-4 py-3">Preço Atual</th>
+                                <th scope="col" className="px-4 py-3">Desconto</th>
+                                <th scope="col" className="px-4 py-3">Preço com desconto</th>
+                                <th scope="col" className="px-4 py-3">Categoria</th>
+                                <th scope="col" className="px-4 py-3">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {produto.map((produto) => (
+                                <CardProduto
+                                    key={produto.id}
+                                    produto={produto}
+                                />
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            )}
+        </div>
     );
 }
 
