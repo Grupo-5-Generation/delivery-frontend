@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import Cadastro from "./cadastro/Cadastro";
@@ -9,23 +10,34 @@ import Navbar from "./components/navbar/Navbar";
 import DeletarProduto from "./components/produto/deletarproduto/DeletarProduto";
 import FormProduto from "./components/produto/formproduto/FormProduto";
 import ListaProduto from "./components/produto/listaproduto/ListaProduto";
-import { AuthProvider } from "./context/AuthContext";
+
+import { AuthContext, AuthProvider } from "./context/AuthContext";
+import Doacao from "./pages/doacao/Doacao";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
-import Doacao from "./pages/doacao/Doacao";
+import Sidebar from "./components/navbar/Sidebar";
 
-function App() {
+function AppContent() {
+  const { usuario } = useContext(AuthContext);
+
   return (
-    <AuthProvider>
+    <>
       <ToastContainer />
       <BrowserRouter>
-        <Navbar />
-        <div className="min-h-[80vh]">
+        {/* Mostrar Navbar apenas se NÃO estiver logado */}
+        {usuario.token === "" && <Navbar />}
+
+        {/* Mostrar Sidebar apenas se estiver logado */}
+        {usuario.token !== "" && <Sidebar />}
+
+        {/* Adiciona padding à esquerda se a sidebar estiver visível */}
+        <div className={`min-h-[80vh] ${usuario.token !== "" ? "pl-64" : ""}`}>
           <Routes>
-            <Route path="/" element={<Login />} />
+            <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/cadastro" element={<Cadastro />} />
+            <Route path="/doacao" element={<Doacao />} />
             <Route path="/categoria" element={<ListaCategoria />} />
             <Route path="/cadastrarcategoria" element={<FormCategoria />} />
             <Route path="/editarcategoria/:id" element={<FormCategoria />} />
@@ -37,11 +49,18 @@ function App() {
             <Route path="/cadastrarproduto" element={<FormProduto />} />
             <Route path="/editarproduto/:id" element={<FormProduto />} />
             <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
-            <Route path="/doacao" element={<Doacao />} />
           </Routes>
         </div>
         <Footer />
       </BrowserRouter>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <AuthProvider>
+      <AppContent />
     </AuthProvider>
   );
 }
