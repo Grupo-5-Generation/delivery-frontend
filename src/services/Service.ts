@@ -56,3 +56,8 @@ export const aplicarDesconto =  async ( url:string, setDados:Function ) => {
     const resposta = await api.put(url);
     setDados (resposta.data)
 };
+
+export const aplicarDesconto =  async ( url:string, setDados:Function ) => {
+    const resposta = await api.put(url);
+    setDados (resposta.data)
+};
