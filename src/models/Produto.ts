@@ -9,6 +9,7 @@ export default interface Produto{
   desconto: number;
   precoAtual: number;
   status: boolean;
+  foto: string;
   categoria: Categoria | null;
   usuario: Usuario | null;
 }

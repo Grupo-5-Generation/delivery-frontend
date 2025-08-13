@@ -31,7 +31,7 @@ function AppContent() {
         {usuario.token !== "" && <Sidebar />}
 
         {/* Adiciona padding à esquerda se a sidebar estiver visível */}
-        <div className={`min-h-[80vh] bg-[#efe9e2] ${usuario.token !== "" ? "pl-64" : ""}`}>
+        <div className={` bg-[#efe9e2] ${usuario.token !== "" ? "pl-52 min-h-[94vh]" : "min-h-[80vh]"}`}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
