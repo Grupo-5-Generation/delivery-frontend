@@ -14,22 +14,22 @@ function Sidebar() {
   }
 
   return (
-    <aside className="fixed top-0 left-0 h-screen w-64 bg-sky-900 text-white shadow-lg p-6 z-50">
+    <aside className="fixed top-0 left-0 h-screen w-64 bg-[#434522] text-white shadow-lg p-6 z-50">
       <h2 className="text-2xl font-bold mb-6">Menu</h2>
       <nav className="flex flex-col gap-6 text-lg">
-        <Link to="/home" className="flex items-center gap-2 hover:text-yellow-400">
+        <Link to="/home" className="flex items-center gap-2 hover:text-[#e0c59b]">
           <FaHome />
           Home
         </Link>
-        <Link to="/listaproduto" className="flex items-center gap-2 hover:text-yellow-400">
+        <Link to="/listaproduto" className="flex items-center gap-2 hover:text-[#e0c59b]">
           <FaBoxOpen />
           Produtos
         </Link>
-        <Link to="/categoria" className="flex items-center gap-2 hover:text-yellow-400">
+        <Link to="/categoria" className="flex items-center gap-2 hover:text-[#e0c59b]">
           <FaTags />
           Categoria
         </Link>
-        <Link to="/doacao" className="flex items-center gap-2 hover:text-yellow-400">
+        <Link to="/doacao" className="flex items-center gap-2 hover:text-[#e0c59b]">
           <FaHeart />
           Doação
         </Link>

@@ -59,31 +59,31 @@ function Navbar() {
   } else {
     // Não logado → menu público
     component = (
-      <div className="w-full bg-sky-900 text-white py-4">
+      <div className="w-full bg-[#434522] text-white py-4">
         <div className="container mx-auto flex justify-between text-lg px-8">
           <Link
             to="/home"
-            className="text-2xl font-bold px-2 hover:bg-[#275292]"
+            className="text-2xl font-bold px-4 py-2 rounded hover:opacity-25"
           >
             Terminal Gourmet
           </Link>
 
           <div className="flex gap-4">
-            <Link to="/home" className="rounded-md px-2 hover:bg-[#275292]">
+            <Link to="/home" className="px-4 py-2 rounded hover:underline">
               Home
             </Link>
-            <Link to="/doacao" className="hover:underline">
+            <Link to="/doacao" className="px-4 py-2 rounded hover:underline">
               Doação
             </Link>
             <Link
               to="/login"
-              className="bg-blue-500 px-4 py-2 rounded hover:bg-blue-600"
+              className="px-4 py-2 rounded hover:underline"
             >
               Login
             </Link>
             <Link
               to="/cadastro"
-              className="bg-green-500 px-4 py-2 rounded hover:bg-green-600"
+              className="px-4 py-2 rounded hover:underline"
             >
               Cadastro
             </Link>

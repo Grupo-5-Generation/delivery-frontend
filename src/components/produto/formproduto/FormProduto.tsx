@@ -174,11 +174,11 @@ function FormProduto() {
                     />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="status">status</label>
+                    <label htmlFor="quantidade">Quantidade</label>
                     <input
-                        type="boolean"
-                        placeholder="Status"
-                        name="status"
+                        type="number"
+                        placeholder="Quantidade"
+                        name="quantidade"
                         required
                         className="border-2 border-slate-700 rounded p-2"
                         value={produto.quantidade}
