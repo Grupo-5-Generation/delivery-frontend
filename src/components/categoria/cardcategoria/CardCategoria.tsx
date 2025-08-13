@@ -1,40 +1,42 @@
-import { Link } from 'react-router-dom' 
-import  type  Categoria  from '../../../models/Categoria'
+import {  Link } from 'react-router-dom';
+import type Categoria from '../../../models/Categoria';
 
-interface CardCategoriaProps{
- categoria:Categoria
+interface CardCategoriaProps {
+    categoria: Categoria
 }
 
 function CardCategoria({ categoria}: CardCategoriaProps) {
+
     return (
-       
-        <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
-   
-            <header className='py-2 px-6 bg-indigo-800 text-white font-bold text-2xl'>
-                Categoria
-            </header>
-           
-            <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.descricao}</p>
-            <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.tipo}</p>
-            
-            
-            <div className="flex">
-           
-                <Link to={`/editarcategoria/${categoria.id}`}
-                    className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-800 
-                    flex items-center justify-center py-2'>
-                    <button>Editar</button>
+        <tr className="border-b hover:bg-gray-50">
+    
+       <td className="px-4 py-3">
+            <div className="relative inline-block text-left text-sky-900">
+            <details className="group">
+                <summary className="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-300">
+                ☰
+                </summary>
+                <div className="absolute mt-1 bg-white border rounded-lg shadow-lg w-40 z-10">
+                <Link to={`/editarcategoria/${categoria.id}`} className="block px-4 py-2 hover:bg-gray-100">
+                    <i className="fa-solid fa-edit text-1xl p-2"></i>
+                    Alterar
                 </Link>
-
-            
-                <Link to={`/deletarcategoria/${categoria.id}`} 
-                    className='text-slate-100 bg-red-400 hover:bg-red-700 w-full 
-                    flex items-center justify-center'>
-                    <button>Deletar</button>
+                
+                <Link to={`/deletarcategoria/${categoria.id}`} className="block px-4 py-2 hover:bg-gray-100">
+                <i className="fa-solid fa-trash text-1xl p-2"></i>
+                    Deletar
                 </Link>
-
+                </div>
+            </details>
             </div>
-        </div>
+        </td> 
+
+            <td className="px-4 py-3 ">{categoria.tipo}</td>
+                
+            <td className="px-4 py-3">{categoria.descricao}</td>
+
+        </tr>
     )
 }
-export default CardCategoria;
+
+export default CardCategoria
