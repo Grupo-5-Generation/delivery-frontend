@@ -49,4 +49,10 @@ export const atualizar = async (
 
 export const deletar = async (url: string, header: object) => {
   await api.delete(url, header);
+
+  }
+
+export const aplicarDesconto =  async ( url:string, setDados:Function ) => {
+    const resposta = await api.put(url);
+    setDados (resposta.data)
 };

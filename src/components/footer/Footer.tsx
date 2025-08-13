@@ -4,7 +4,7 @@ function Footer() {
 
   return (
     <>
-      <div className="flex justify-center bg-sky-900 text-white">
+      <div className="flex justify-center bg-[#434522] text-white">
         <div className="w-full px-8 flex justify-between items-center py-4">
           <div className="flex gap-2">
             <p className="text-lg">Acesse nosso Github: </p>
