@@ -11,11 +11,12 @@ import DeletarProduto from "./components/produto/deletarproduto/DeletarProduto";
 import FormProduto from "./components/produto/formproduto/FormProduto";
 import ListaProduto from "./components/produto/listaproduto/ListaProduto";
 
+import Sidebar from "./components/navbar/Sidebar";
+import MostrarProduto from "./components/produto/mostrarproduto/MostrarProduto";
 import { AuthContext, AuthProvider } from "./context/AuthContext";
 import Doacao from "./pages/doacao/Doacao";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
-import Sidebar from "./components/navbar/Sidebar";
 
 function AppContent() {
   const { usuario } = useContext(AuthContext);
@@ -42,14 +43,12 @@ function AppContent() {
             <Route path="/categoria" element={<ListaCategoria />} />
             <Route path="/cadastrarcategoria" element={<FormCategoria />} />
             <Route path="/editarcategoria/:id" element={<FormCategoria />} />
-            <Route
-              path="/deletarcategoria/:id"
-              element={<DeletarCategoria />}
-            />
+            <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
             <Route path="/listaproduto" element={<ListaProduto />} />
             <Route path="/cadastrarproduto" element={<FormProduto />} />
             <Route path="/editarproduto/:id" element={<FormProduto />} />
             <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
+            <Route path="/mostrarproduto/:id" element={<MostrarProduto />} />
           </Routes>
         </div>
         <Footer />

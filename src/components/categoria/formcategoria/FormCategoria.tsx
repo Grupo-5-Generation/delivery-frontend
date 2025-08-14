@@ -137,8 +137,8 @@ function FormCategoria() {
         </button>
 
         <button type="reset" className="rounded text-white bg-[#ac906c] hover:bg-[#c5a67e] w-1/2 py-2" onClick={retornar}>
-                Cancelar
-              </button>
+          Cancelar
+        </button>
         </div>
       </form>
       </div>

@@ -11,13 +11,7 @@ interface CardProdutoProps {
 function CardProduto({ produto }: CardProdutoProps) {
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [produtoDesconto, setProdutoDesconto] = useState<Produto>(
-        {} as Produto
-
-
-
-        
-    );
+    const [produtoDesconto, setProdutoDesconto] = useState<Produto>( {} as Produto);
     const navigate = useNavigate();
 
     function formatarPreco(valor: number) {
@@ -30,22 +24,19 @@ function CardProduto({ produto }: CardProdutoProps) {
     async function darDesconto() {
         try {
             await aplicarDesconto(
-                `/produto/${produto.id}`,
+                `/produto/desconto-saudavel/${produto.id}`,
                 setProdutoDesconto
             );
             alert("Desconto aplicado com sucesso!");
             navigate("/listaproduto");
         } catch (error) {
             console.error(error);
-            alert("Erro ao aplicar o desconto.");
+            alert("Erro ao aplicar desconto em produto.");
         }
     }
 
-
-
     return (
         <tr className="border-b border-b-[#ac906c] hover:bg-gray-50 text-green-950">
-
             <td className="px-4 py-3">
                 <div className="relative inline-block text-left">
                     <details className="group">
@@ -53,6 +44,10 @@ function CardProduto({ produto }: CardProdutoProps) {
                             ☰
                         </summary>
                         <div className="absolute mt-1 bg-white border rounded-lg shadow-lg w-40 z-10">
+                            <Link to={`/mostrarproduto/${produto.id}`} className="block px-4 py-2 hover:bg-gray-100">
+                                <i className="fa-solid fa-eye text-1xl p-2"></i>
+                                Visualizar
+                            </Link>
                             <Link to={`/editarproduto/${produto.id}`} className="block px-4 py-2 hover:bg-gray-100">
                                 <i className="fa-solid fa-edit text-1xl p-2"></i>
                                 Alterar

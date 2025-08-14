@@ -1,4 +1,3 @@
-import { FaBuilding, FaMoneyBillWave } from "react-icons/fa";
 
 function Home() {
   return (
@@ -88,8 +87,20 @@ function Home() {
             <span className="text-[#434522] text-2xl">link muito doido aqui mas vamo colocar alguma coisa só pra ocupar espaço</span>
           </div>
           <div>
-            <p className="text-3xl text-[#434522] font-bold">Como chegar</p>
-            <span className="text-[#434522] text-2xl">Vai andando q da certo</span>
+            <div>
+              <p className="text-3xl text-[#434522] font-bold">Como chegar</p>
+              <iframe
+                title="Mapa Terminal Gourmet"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.1234567890!2d-46.6531234!3d-23.5645678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b123456789%3A0xabcdef123456789!2sRua Teodoro Sampaio, 1629, Pinheiros, São Paulo - SP, CEP 05405-150!5e0!3m2!1spt-BR!2sbr!4v1691913600000!5m2!1spt-BR!2sbr"
+                width="400"
+                height="200"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg mt-4"
+              ></iframe>
+            </div>
           </div>
         </div>
 
