@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { FaCheck, FaXmark } from 'react-icons/fa6';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { AuthContext } from '../../../context/AuthContext';
 import type Produto from '../../../models/Produto';
 import { aplicarDesconto } from '../../../services/Service';
 
@@ -14,6 +15,11 @@ function CardProduto({ produto }: CardProdutoProps) {
     const [produtoDesconto, setProdutoDesconto] = useState<Produto>( {} as Produto);
     const navigate = useNavigate();
 
+    const { id } = useParams<{ id: string }>()
+
+    const { usuario, handleLogout } = useContext(AuthContext)
+    const token = usuario.token
+
     function formatarPreco(valor: number) {
         return valor.toLocaleString("pt-BR", {
             style: "currency",
@@ -22,18 +28,19 @@ function CardProduto({ produto }: CardProdutoProps) {
 
     }
     async function darDesconto() {
-        try {
-            await aplicarDesconto(
-                `/produto/desconto-saudavel/${produto.id}`,
-                setProdutoDesconto
-            );
-            alert("Desconto aplicado com sucesso!");
-            navigate("/listaproduto");
-        } catch (error) {
-            console.error(error);
-            alert("Erro ao aplicar desconto em produto.");
-        }
+    try {
+        await aplicarDesconto(
+            `/produto/desconto-saudavel/${produto.id}`,
+            setProdutoDesconto,
+            { headers: { Authorization: token } }
+        );
+        alert("Desconto aplicado com sucesso!");
+        
+    } catch (error) {
+        console.error(error);
+        alert("Erro ao aplicar desconto em produto.");
     }
+}
 
     return (
         <tr className="border-b border-b-[#ac906c] hover:bg-gray-50 text-green-950">
@@ -54,7 +61,7 @@ function CardProduto({ produto }: CardProdutoProps) {
                             </Link>
                             <button onClick={darDesconto} className="w-full text-left px-4 py-2 hover:bg-gray-100">
                                 <i className="fa-solid fa-usd text-1xl p-2"></i>
-                                Aplicar Desconto
+                                Desconto saudável
                             </button>
                             <Link to={`/deletarproduto/${produto.id}`} className="block px-4 py-2 hover:bg-gray-100">
                                 <i className="fa-solid fa-trash text-1xl p-2"></i>
