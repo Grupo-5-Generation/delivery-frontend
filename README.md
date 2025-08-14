@@ -94,8 +94,8 @@ src/
  ├── App.jsx         # Componente principal
  └── main.jsx        # Ponto de entrada da aplicação
 
-
-## | Nome              | GitHub | LinkedIn |
+ ## 👥 Integrantes
+ | Nome              | GitHub | LinkedIn |
 |-------------------|--------|----------|
 | Mariana Oliveira  | [maridevdata](https://github.com/maridevdata) | [LinkedIn](https://www.linkedin.com/in/mariana-luisa) |
 | Andressa Muniz    | [Munnizdev](https://github.com/Munnizdev) | [LinkedIn](https://www.linkedin.com/in/andressa-muniz-2a7714146) |
