@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { FaBoxOpen, FaHeart, FaHome, FaSignOutAlt, FaTags } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import { FaHome, FaBoxOpen, FaTags, FaHeart, FaSignOutAlt } from "react-icons/fa";
 
 function Sidebar() {
   const navigate = useNavigate();
@@ -9,7 +9,6 @@ function Sidebar() {
 
   function logout() {
     handleLogout();
-    alert("O Usuário foi desconectado com sucesso!");
     navigate("/");
   }
 

@@ -10,9 +10,9 @@ function Navbar() {
 
   function logout() {
     handleLogout();
-    alert("O Usuário foi desconectado com sucesso!");
     navigate("/");
   }
+
 
   let component: ReactNode;
 
