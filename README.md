@@ -21,23 +21,23 @@ O sistema foi construído com Vite + React para garantir alta performance e carr
 
 ## ✨ Funcionalidades
 
-# 🛒 CRUD de Produtos
+ 🛒 CRUD de Produtos
 
 Adicione, edite, remova e visualize produtos de forma simples e eficiente.
 
-# 🥗 Desconto Automático para Itens Saudáveis
+ 🥗 Desconto Automático para Itens Saudáveis
 
 Regras de desconto inteligentes para incentivar hábitos alimentares mais saudáveis.
 
-# 🔒 Autenticação de Usuário
+🔒 Autenticação de Usuário
 
 Controle de acesso seguro com autenticação JWT e proteção de rotas.
 
-# 🤝 Página de Doação de Alimentos
+🤝 Página de Doação de Alimentos
 
 Ferramenta para registrar e incentivar ações solidárias.
 
-# 📱 Interface Responsiva
+ 📱 Interface Responsiva
 
 Layout otimizado para desktops, tablets e smartphones.
 
