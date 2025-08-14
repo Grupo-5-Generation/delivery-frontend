@@ -1,4 +1,4 @@
-import {  Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import type Categoria from '../../../models/Categoria';
 
 interface CardCategoriaProps {
@@ -8,10 +8,10 @@ interface CardCategoriaProps {
 function CardCategoria({ categoria}: CardCategoriaProps) {
 
     return (
-        <tr className="border-b hover:bg-gray-50">
+        <tr className="border-b border-b-[#ac906c] hover:bg-gray-50 text-green-950">
     
        <td className="px-4 py-3">
-            <div className="relative inline-block text-left text-sky-900">
+            <div className="relative inline-block text-left">
             <details className="group">
                 <summary className="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-300">
                 ☰

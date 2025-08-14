@@ -1,4 +1,6 @@
 import { type ReactNode, useContext } from "react";
+import { FaHome, FaSignInAlt } from "react-icons/fa";
+import { FaAddressBook, FaHeart } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 
@@ -25,6 +27,7 @@ function Navbar() {
           >
             Terminal Gourmet
           </Link>
+          
 
           <div className="flex gap-4">
             <Link to="/home" className="rounded-md px-2 hover:bg-[#5b5c38]">
@@ -63,28 +66,29 @@ function Navbar() {
         <div className="container mx-auto flex justify-between text-lg px-8">
           <Link
             to="/home"
-            className="text-2xl font-bold px-4 py-2 rounded hover:opacity-25"
-          >
-            Terminal Gourmet
+            className="text-2xl font-bold px-4 py-2 rounded hover:text-[#e0c59b]">
+          <img
+            src="https://ik.imagekit.io/vtdzeofuq/fotoicone.png?updatedAt=1755176875563"
+            alt="Logo Terminal Gourmet"
+            className="w-40"
+          />
           </Link>
 
           <div className="flex gap-4">
-            <Link to="/home" className="px-4 py-2 rounded hover:underline">
+            <Link to="/home" className="flex items-center gap-2 hover:underline hover:text-[#e0c59b]">
+              <FaHome />
               Home
             </Link>
-            <Link to="/doacao" className="px-4 py-2 rounded hover:underline">
+            <Link to="/doacao" className="flex items-center gap-2 hover:underline hover:text-[#e0c59b]">
+              <FaHeart />
               Doação
             </Link>
-            <Link
-              to="/login"
-              className="px-4 py-2 rounded hover:underline"
-            >
+            <Link to="/login" className="flex items-center gap-2 hover:underline hover:text-[#e0c59b]">
+              <FaSignInAlt />
               Login
             </Link>
-            <Link
-              to="/cadastro"
-              className="px-4 py-2 rounded hover:underline"
-            >
+            <Link to="/cadastro" className="flex items-center gap-2 hover:underline hover:text-[#e0c59b]">
+              <FaAddressBook />
               Cadastro
             </Link>
           </div>
