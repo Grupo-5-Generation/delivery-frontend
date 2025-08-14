@@ -30,7 +30,7 @@ function Home() {
         </h1>
 
         <div className="max-w-3xl h-100 max-h-1/2 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pb-26">
-         
+
           {/* Card 1 */}
           <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center hover:opacity-55">
             <img
@@ -44,7 +44,7 @@ function Home() {
             </p>
           </div>
 
-           {/* Card 2 */}
+          {/* Card 2 */}
           <div className="bg-[#7f6748] rounded-lg p-2 shadow-lg text-white flex flex-col items-center hover:opacity-55">
             <img
               src="https://ik.imagekit.io/maridevdata/Prato%20Saudavel2.jpg?updatedAt=1755026274300"
@@ -105,11 +105,11 @@ function Home() {
         </div>
 
         {/* Imagem */}
-          <img
-            src="https://ik.imagekit.io/maridevdata/Restaurante%20Home.jpg?updatedAt=1755106030159"
-            alt="Foto da div"
-            className="h-[65vh] mx-10 rounded-xl object-contain"
-          />
+        <img
+          src="https://ik.imagekit.io/maridevdata/Restaurante%20Home.jpg?updatedAt=1755106030159"
+          alt="Foto da div"
+          className="h-[65vh] mx-10 rounded-xl object-contain"
+        />
       </div>
 
       {/* Seção 5 - Nossos Clientes */}
@@ -119,11 +119,11 @@ function Home() {
           {/* Cliente 1 */}
           <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center hover:opacity-55">
             <img
-              src="https://ik.imagekit.io/zddqh4rhi/businessman.png?updatedAt=1755105724971"
+              src="https://ik.imagekit.io/vtdzeofuq/douglas2.jpg?updatedAt=1755173688168"
               alt="Imagem cliente 1"
-              className="w-60 h-40 rounded-md mb-4 flex items-center justify-center"
+              className="w-40 h-40 rounded-full object-cover mb-4"
             />
-            <h2 className="text-lg font-semibold mb-2">André Silva</h2>
+            <h2 className="text-lg font-semibold mb-2">Douglas</h2>
             <p className="text-1xl font-semibold text-gray-200 text-center">
               "Cada prato é uma obra de arte no sabor e na apresentação. Uma experiência gastronômica inesquecível"
             </p>
@@ -132,11 +132,11 @@ function Home() {
           {/* Cliente 2 */}
           <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center hover:opacity-55">
             <img
-              src="https://ik.imagekit.io/zddqh4rhi/man.png?updatedAt=1755105710891"
+              src="https://ik.imagekit.io/maridevdata/Image%20(2).jpg?updatedAt=1753313747315"
               alt="Imagem cliente 2"
-              className="w-60 h-40 rounded-md mb-4 flex items-center justify-center"
+              className="w-40 h-40 rounded-full object-cover mb-4"
             />
-            <h2 className="text-lg font-semibold mb-2">Thiago Souza</h2>
+            <h2 className="text-lg font-semibold mb-2">Mariana</h2>
             <p className="text-1xl font-semibold text-gray-200 text-center">
               "Finalmente encontrei um lugar onde comer saudável é também uma experiência deliciosa e cheia de sabor."
             </p>
@@ -145,11 +145,11 @@ function Home() {
           {/* Cliente 3 */}
           <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center hover:opacity-55">
             <img
-              src="https://ik.imagekit.io/zddqh4rhi/woman%20(1).png?updatedAt=1755105698580"
+              src="https://i.ibb.co/PZs90f88/Whats-App-Image-2025-08-14-at-09-40-48.jpg"
               alt="Imagem cliente 3"
-              className="w-60 h-40 rounded-md mb-4 flex items-center justify-center"
+              className="w-40 h-40 rounded-full object-cover mb-4"
             />
-            <h2 className="text-lg font-semibold mb-2">Patricia Lima</h2>
+            <h2 className="text-lg font-semibold mb-2">Andressa</h2>
             <p className="text-1xl font-semibold text-gray-200 text-center">
               "Os temperos, as combinações e a textura… tudo é pensado nos mínimos detalhes. Simplesmente impecável!"
             </p>
@@ -158,11 +158,11 @@ function Home() {
           {/* Cliente 4 */}
           <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center hover:opacity-55">
             <img
-              src="https://ik.imagekit.io/zddqh4rhi/woman.png?updatedAt=1755105683820"
+              src="https://ik.imagekit.io/vtdzeofuq/fotoYsabella.jpeg?updatedAt=1755175639233"
               alt="Imagem cliente 4"
-              className="w- h-40 rounded-md mb-4 flex items-center justify-center"
+              className="w-40 h-40 rounded-full object-cover mb-4"
             />
-            <h2 className="text-lg font-semibold mb-2">Bruna Tavares</h2>
+            <h2 className="text-lg font-semibold mb-2">Ysabella</h2>
             <p className="text-1xl font-semibold text-gray-200 text-center">
               "O site é lindo e fácil de navegar, já dá água na boca antes mesmo de fazer o pedido."
             </p>

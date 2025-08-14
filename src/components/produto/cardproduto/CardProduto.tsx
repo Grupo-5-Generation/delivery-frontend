@@ -92,7 +92,7 @@ function CardProduto({
       <td className="px-4 py-3">{formatarPreco(produto.precoAtual)}</td>
       <td className="px-4 py-3">{formatarPreco(produto.desconto || 0)}</td>
       <td className="px-4 py-3">{formatarPreco(produto.precoAtual)}</td>
-      <td className="px-4 py-3">{produto.categoria?.descricao}</td>
+      <td className="px-4 py-3">{produto.categoria?.tipo}</td>
       <td className="px-4 py-3">
         {produto.status ? (
           <FaCheck className="text-green-500" />

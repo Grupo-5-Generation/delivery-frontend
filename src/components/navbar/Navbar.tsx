@@ -68,9 +68,9 @@ function Navbar() {
             to="/home"
             className="text-2xl font-bold px-4 py-2 rounded hover:text-[#e0c59b]">
           <img
-            src="https://ik.imagekit.io/zddqh4rhi/1-ad089607.ico?updatedAt=1755174045314"
+            src="https://ik.imagekit.io/vtdzeofuq/fotoicone.png?updatedAt=1755176875563"
             alt="Logo Terminal Gourmet"
-            className=""
+            className="w-40"
           />
           </Link>
 
