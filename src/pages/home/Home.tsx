@@ -84,7 +84,7 @@ function Home() {
           </div>
           <div>
             <p className="text-3xl text-[#434522] font-bold">Delivery</p>
-            <span className="text-[#434522] text-2xl">link muito doido aqui mas vamo colocar alguma coisa só pra ocupar espaço</span>
+            <span className="text-[#434522] text-2xl">https://terminalgourmet.netlify.app/</span>
           </div>
           <div>
             <div>
