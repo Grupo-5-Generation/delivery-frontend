@@ -95,6 +95,13 @@ VITE_API_URL=http://localhost:5173
  ┃ ┗ 📜 main.tsx    # Arquivo principal do app
  ┣ 📜 package.json
  ┗ 📜 vite.config.ts
+---
+
+
+✨ Desenvolvido com dedicação pelo Grupo 5 – Generation Brasil
+
+
+---
 
  ## 👥 Integrantes
  | Nome              | GitHub | LinkedIn |
