@@ -83,7 +83,7 @@ Crie um arquivo .env na raiz do projeto com as seguintes variáveis:
 VITE_API_URL=http://localhost:5173
 
 
-# 📂 Estrutura de Pastas
+## 📂 Estrutura de Pastas
 src/
  ├── assets/         # Imagens e ícones
  ├── components/     # Componentes reutilizáveis
@@ -95,7 +95,7 @@ src/
  └── main.jsx        # Ponto de entrada da aplicação
 
 
-# | Nome              | GitHub | LinkedIn |
+## | Nome              | GitHub | LinkedIn |
 |-------------------|--------|----------|
 | Mariana Oliveira  | [maridevdata](https://github.com/maridevdata) | [LinkedIn](https://www.linkedin.com/in/mariana-luisa) |
 | Andressa Muniz    | [Munnizdev](https://github.com/Munnizdev) | [LinkedIn](https://www.linkedin.com/in/andressa-muniz-2a7714146) |
