@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext";
 import type Produto from "../../../models/Produto";
 import { buscar } from "../../../services/Service";
@@ -53,30 +53,38 @@ function ListaProduto() {
                     </div>
                 </div>
             ) : (
-                <div className="bg-white shadow w-full ">
-                    <table className="w-full text-sm text-left text-gray-700 ">
-                        <thead className="bg-[#ac906c] text-white ">
-                            <tr>
-                                <th scope="col" className="px-4 py-3">Ações</th>  
-                                <th scope="col" className="px-4 py-3">Nome</th>
-                                <th scope="col" className="px-4 py-3">Quantidade</th>
-                                <th scope="col" className="px-4 py-3">Preço Atual</th>
-                                <th scope="col" className="px-4 py-3">Desconto</th>
-                                <th scope="col" className="px-4 py-3">Preço com desconto</th>
-                                <th scope="col" className="px-4 py-3">Categoria</th>
-                                <th scope="col" className="px-4 py-3">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {produto.map((produto) => (
-                                <CardProduto
-                                    key={produto.id}
-                                    produto={produto}
-                                />
-                            ))}
-                        </tbody>
-                    </table>
+                
+            <>
+                <div className="flex justify-between items-center mb-4 pt-20">
+                        <Link to="/cadastrarproduto" className="bg-[#434522] hover:bg-[#5b5c38] text-white px-4 py-2 font-bold">
+                            <i className="fa fa-plus text-white text-base p-1"></i>
+                            Inserir produto
+                        </Link>
                 </div>
+                <div className="bg-white shadow w-full ">
+                        <table className="w-full text-sm text-left text-gray-700 ">
+                            <thead className="bg-[#ac906c] text-white ">
+                                <tr>
+                                    <th scope="col" className="px-4 py-3">Ações</th>
+                                    <th scope="col" className="px-4 py-3">Nome</th>
+                                    <th scope="col" className="px-4 py-3">Quantidade</th>
+                                    <th scope="col" className="px-4 py-3">Preço Atual</th>
+                                    <th scope="col" className="px-4 py-3">Desconto</th>
+                                    <th scope="col" className="px-4 py-3">Preço com desconto</th>
+                                    <th scope="col" className="px-4 py-3">Categoria</th>
+                                    <th scope="col" className="px-4 py-3">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {produto.map((produto) => (
+                                    <CardProduto
+                                        key={produto.id}
+                                        produto={produto} />
+                                ))}
+                            </tbody>
+                        </table>
+                </div>
+            </>
             )}
         </div>
     );

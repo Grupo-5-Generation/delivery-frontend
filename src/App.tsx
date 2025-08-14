@@ -31,7 +31,8 @@ function AppContent() {
         {usuario.token !== "" && <Sidebar />}
 
         {/* Adiciona padding à esquerda se a sidebar estiver visível */}
-        <div className={`min-h-[80vh] bg-[url(https://ik.imagekit.io/maridevdata/Fundo%20de%20Tela.png?updatedAt=1755115852401)] ${usuario.token !== "" ? "pl-64" : ""}`}>
+        <div className={`bg-[url(https://ik.imagekit.io/maridevdata/Fundo%20de%20Tela.png?updatedAt=1755115852401)] ${usuario.token !== "" ? "pl-52 min-h-[94vh]" : "min-h[80vh]"}`}>
+        
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />

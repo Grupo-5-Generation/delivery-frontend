@@ -1,9 +1,9 @@
 import { type ChangeEvent, useContext, useEffect, useState } from "react";
 import { RotatingLines } from "react-loader-spinner";
 import { Link, useNavigate } from "react-router-dom";
-import "./Login.css";
 import { AuthContext } from "../../context/AuthContext";
 import type UsuarioLogin from "../../models/Usuariologin";
+import "./Login.css";
 
 function Login() {
   const navigate = useNavigate();
@@ -34,16 +34,9 @@ function Login() {
 
   return (
     <>
-    <div className="">
-      <div
-        className="flex flex-col 
-                    h-screen place-items-center font-bold bg-[#434522]/30 py-50 
-                    m-30 border-4 border-white rounded-2xl"
-      >
-        <form
-          className="flex justify-center items-center flex-col w-1/4 gap-4"
-          onSubmit={login}
-        >
+    <div className="max-w-7xl mx-auto px-4 py-6" >
+      <div className="place-items-center font-bold bg-[#434522]/30 py-30 m-30 rounded-2xl">
+        <form className="flex justify-center items-center flex-col w-1/2 gap-4" onSubmit={login}>
           <h2 className="text-[#473e31] text-5xl ">Entrar</h2>
           <div className="flex flex-col text-[#473e31] w-full">
             <label htmlFor="usuario">Usuário</label>
@@ -73,11 +66,7 @@ function Login() {
               }
             />
           </div>
-          <button
-            type="submit"
-            className="rounded bg-[#675947] flex justify-center
-                                   hover:bg-[#473e31] text-white w-1/2 py-2"
-          >
+          <button type="submit" className="rounded bg-[#434522] hover:bg-[#5b5c38] flex justify-center text-white w-1/2 py-2" >
             {isLoading ? (
               <RotatingLines
                 strokeColor="white"

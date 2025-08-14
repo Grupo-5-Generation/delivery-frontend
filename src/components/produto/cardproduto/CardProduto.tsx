@@ -53,10 +53,6 @@ function CardProduto({ produto }: CardProdutoProps) {
                             ☰
                         </summary>
                         <div className="absolute mt-1 bg-white border rounded-lg shadow-lg w-40 z-10">
-                            <Link to={`/cadastrarproduto`} className="block px-4 py-2 hover:bg-gray-100">
-                                <i className="fa-solid fa-plus text-1xl p-2"></i>
-                                Adicionar
-                            </Link>
                             <Link to={`/editarproduto/${produto.id}`} className="block px-4 py-2 hover:bg-gray-100">
                                 <i className="fa-solid fa-edit text-1xl p-2"></i>
                                 Alterar

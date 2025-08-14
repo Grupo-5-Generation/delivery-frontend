@@ -1,9 +1,9 @@
-import { useState, useContext, useEffect, type ChangeEvent } from "react";
+import { useContext, useEffect, useState, type ChangeEvent } from "react";
 import { RotatingLines } from "react-loader-spinner";
 import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext";
-import { buscar, atualizar, cadastrar } from "../../../services/Service";
 import type Categoria from "../../../models/Categoria";
+import { atualizar, buscar, cadastrar } from "../../../services/Service";
 import { ToastAlerta } from "../../../utils/ToastAlesta";
 
 function FormCategoria() {
@@ -90,39 +90,39 @@ function FormCategoria() {
   }
 
   return (
-    <div className="container flex flex-col items-center justify-center mx-auto">
-      <h1 className="text-4xl text-center my-8">
+    <>
+      <div className="max-w-7xl mx-auto px-4 py-6" >
+        <div className="place-items-center font-bold bg-[#434522]/30 py-30 m-30 rounded-2xl">
+        <form className="flex justify-center items-center flex-col w-1/2 gap-4" onSubmit={gerarNovaCategoria}>
+      <h1 className="text-[#473e31] text-5xl ">
         {id === undefined ? "Cadastrar Categoria" : "Editar Categoria"}
       </h1>
 
-      <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovaCategoria}>
-        <div className="flex flex-col gap-2">
+      
+        <div className="flex flex-col text-[#473e31] w-full">
           <label htmlFor="descricao">Descrição da Categoria</label>
           <input
             type="text"
             placeholder="Descreva aqui sua Categoria"
             name="descricao"
-            className="border-2 border-slate-700 rounded p-2"
+            className="border-2 border-[#675947] bg-white rounded p-2"
             value={categoria.descricao}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col text-[#473e31] w-full">
           <label htmlFor="tipo">Tipo da Categoria</label>
           <input
             type="text"
             placeholder="Descreva o tipo da sua Categoria"
             name="tipo"
-            className="border-2 border-slate-700 rounded p-2"
+            className="border-2 border-[#675947] bg-white rounded p-2"
             value={categoria.tipo}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
         </div>
-        <button
-          className="rounded text-slate-100 bg-indigo-400 
-                               hover:bg-indigo-800 w-1/2 py-2 mx-auto flex justify-center"
-          type="submit"
-        >
+        <div className="flex justify-around w-full gap-8">
+        <button type="submit" className="rounded text-white bg-[#434522] hover:bg-[#5b5c38] w-1/2 py-2 flex justify-center">
           {isLoading ? (
             <RotatingLines
               strokeColor="white"
@@ -135,8 +135,15 @@ function FormCategoria() {
             <span>{id === undefined ? "Cadastrar" : "Atualizar"}</span>
           )}
         </button>
+
+        <button type="reset" className="rounded text-white bg-[#ac906c] hover:bg-[#c5a67e] w-1/2 py-2" onClick={retornar}>
+                Cancelar
+              </button>
+        </div>
       </form>
+      </div>
     </div>
+    </>
   );
 }
 
