@@ -41,7 +41,7 @@ Ferramenta para registrar e incentivar ações solidárias.
 
 Layout otimizado para desktops, tablets e smartphones.
 
-# 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 Tecnologia	Uso no Projeto
 React	Construção da interface de usuário
 Vite	Build rápido e otimizado
@@ -49,7 +49,7 @@ Tailwind CSS	Estilização moderna e responsiva
 React Router Dom 	Gerenciamento de rotas
 Axios	Requisições HTTP para a API
 JWT	Autenticação e autorização de usuários
-# 🚀 Como Rodar o Projeto
+## 🚀 Como Rodar o Projeto
 Pré-requisitos
 
 Node.js (versão LTS recomendada)
@@ -57,23 +57,23 @@ Node.js (versão LTS recomendada)
 npm ou yarn
 
 Passos de Instalação
-# 1. Clonar o repositório
+## 1. Clonar o repositório
 git clone https://github.com/Grupo-5-Generation/delivery-frontend.git
 
-# 2. Acessar o diretório
+## 2. Acessar o diretório
 cd delivery-frontend
 
-# 3. Instalar as dependências
+## 3. Instalar as dependências
 npm install
-# ou
+ou
 yarn install
 
-# 4. Rodar em modo desenvolvimento
+## 4. Rodar em modo desenvolvimento
 npm run dev
-# ou
+ou
 yarn dev
 
-# 5. Acessar no navegador
+## 5. Acessar no navegador
 http://localhost:5173
 
 ⚙️ Configuração de Ambiente
@@ -83,7 +83,7 @@ Crie um arquivo .env na raiz do projeto com as seguintes variáveis:
 VITE_API_URL=http://localhost:5173
 
 
-## 📂 Estrutura de Pastas
+# 📂 Estrutura de Pastas
 src/
  ├── assets/         # Imagens e ícones
  ├── components/     # Componentes reutilizáveis
@@ -95,7 +95,7 @@ src/
  └── main.jsx        # Ponto de entrada da aplicação
 
 
-## | Nome              | GitHub | LinkedIn |
+# | Nome              | GitHub | LinkedIn |
 |-------------------|--------|----------|
 | Mariana Oliveira  | [maridevdata](https://github.com/maridevdata) | [LinkedIn](https://www.linkedin.com/in/mariana-luisa) |
 | Andressa Muniz    | [Munnizdev](https://github.com/Munnizdev) | [LinkedIn](https://www.linkedin.com/in/andressa-muniz-2a7714146) |
