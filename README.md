@@ -84,15 +84,17 @@ VITE_API_URL=http://localhost:5173
 
 
 ## 📂 Estrutura de Pastas
-src/
- ├── assets/         # Imagens e ícones
- ├── components/     # Componentes reutilizáveis
- ├── pages/          # Páginas do sistema
- ├── routes/         # Configuração de rotas
- ├── services/       # Comunicação com API e autenticação
- ├── styles/         # Configuração do Tailwind e estilos globais
- ├── App.jsx         # Componente principal
- └── main.jsx        # Ponto de entrada da aplicação
+```
+📦terminalGourmet
+ ┣ 📂 src
+ ┃ ┣ 📂 assets      # Imagens, ícones e recursos estáticos
+ ┃ ┣ 📂 components  # Componentes reutilizáveis
+ ┃ ┣ 📂 pages       # Páginas da aplicação
+ ┃ ┣ 📂 services    # Serviços e chamadas à API
+ ┃ ┣ 📂 styles      # Estilos globais e temas
+ ┃ ┗ 📜 main.tsx    # Arquivo principal do app
+ ┣ 📜 package.json
+ ┗ 📜 vite.config.ts
 
  ## 👥 Integrantes
  | Nome              | GitHub | LinkedIn |
