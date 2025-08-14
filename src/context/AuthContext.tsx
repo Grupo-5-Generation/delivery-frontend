@@ -1,6 +1,6 @@
 import { createContext, type ReactNode, useState } from "react";
-import { login } from "../services/Service";
 import type UsuarioLogin from "../models/Usuariologin";
+import { login } from "../services/Service";
 import { ToastAlerta } from "../utils/ToastAlesta";
 
 interface AuthContextProps {
@@ -50,6 +50,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
       foto: "",
       token: "",
     });
+    ToastAlerta("O Usuário foi desconectado com sucesso!", "sucesso");
   }
 
   return (
