@@ -1,7 +1,8 @@
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useContext, useEffect, useState, type ChangeEvent } from "react";
-import { useNavigate, useParams } from "react-router-dom";
 import { RotatingLines } from "react-loader-spinner";
+import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext";
 import type Categoria from "../../../models/Categoria";
 import type Produto from "../../../models/Produto";
@@ -16,7 +17,7 @@ function FormProduto() {
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const [categorias, setCategorias] = useState<Categoria[]>([])
 
-    const [categoria, setCategoria] = useState<Categoria>({ id: 0, descricao: '', tipo: ''})
+    const [categoria, setCategoria] = useState<Categoria>({ id: 0, descricao: '', tipo: '' })
     const [produto, setProduto] = useState<Produto>({} as Produto)
 
     const { id } = useParams<{ id: string }>()
@@ -86,8 +87,11 @@ function FormProduto() {
         setProduto({
             ...produto,
             [e.target.name]: e.target.value,
+            status: true,
             categoria: categoria,
             usuario: usuario,
+            desconto: 0,
+            precoAnterior: 0,
         });
     }
 
@@ -140,7 +144,7 @@ function FormProduto() {
         retornar()
     }
 
-    const carregandoCategoria= categoria.descricao === '';
+    const carregandoCategoria = categoria.descricao === '';
 
     return (
         <div className="container flex flex-col mx-auto items-center">
@@ -162,7 +166,7 @@ function FormProduto() {
                     />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="precoAtual">Preço Atual</label>
+                    <label htmlFor="precoAtual">Preço</label>
                     <input
                         type="text"
                         placeholder="precoAtual"
@@ -185,6 +189,39 @@ function FormProduto() {
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
                 </div>
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="foto">Foto</label>
+                    <input
+                        type="text"
+                        placeholder="Insira a URL da Foto"
+                        name="foto"
+                        required
+                        className="border-2 border-slate-700 rounded p-2"
+                        value={produto.foto}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    />
+                </div>
+                <div className="flex flex-col gap-2">
+                    <p>Status do Produto</p>
+                    <select
+                        name="status"
+                        id="status"
+                        value={String(produto.status)} // converte para string para não dar erro
+                        onChange={(e) =>
+                            setProduto({
+                                ...produto,
+                                status: e.target.value === "true", // converte para boolean
+                            })
+                        }
+                        className="border p-2 border-slate-800 rounded"
+                    >
+                        <option value="" disabled>Selecione o status</option>
+                        <option value="true">Disponível</option>
+                        <option value="false">Indisponível</option>
+                    </select>
+                </div>
+
+
                 <div className="flex flex-col gap-2">
                     <p>Categoria do Produto</p>
                     <select name="categoria" id="categoria" className='border p-2 border-slate-800 rounded'

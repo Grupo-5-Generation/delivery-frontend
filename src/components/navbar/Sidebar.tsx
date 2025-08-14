@@ -14,7 +14,7 @@ function Sidebar() {
   }
 
   return (
-    <aside className="fixed top-0 left-0 h-screen w-64 bg-[#434522] text-white shadow-lg p-6 z-50">
+    <aside className="fixed top-0 left-0 h-screen w-52 bg-[#434522] text-white shadow-lg p-6 z-50">
       <h2 className="text-2xl font-bold mb-6">Menu</h2>
       <nav className="flex flex-col gap-6 text-lg">
         <Link to="/home" className="flex items-center gap-2 hover:text-[#e0c59b]">
