@@ -76,7 +76,7 @@ yarn dev
 ## 5. Acessar no navegador
 http://localhost:5173
 
-⚙️ Configuração de Ambiente
+## ⚙️ Configuração de Ambiente
 
 Crie um arquivo .env na raiz do projeto com as seguintes variáveis:
 
