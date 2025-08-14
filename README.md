@@ -1,69 +1,106 @@
-# React + TypeScript + Vite
+## 🍽️ Terminal Gourmet - Painel do Gerente
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Gerencie pedidos, incentive escolhas saudáveis e promova solidariedade, tudo em uma interface moderna e intuitiva.
 
-Currently, two official plugins are available:
+## 📑 Índice
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [📌 Sobre]
+- [✨ Funcionalidades]
+- [🚀 Tecnologias]
+- [⚙️ Instalação]
+- [💻 Uso]
+- [📂 Estrutura de Pastas]
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📖 Sobre o Projeto
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+O Terminal Gourmet é um painel de controle para gerentes de delivery, desenvolvido para oferecer praticidade e inteligência na gestão de produtos.
+Com ele, é possível realizar CRUD completo de produtos, aplicar descontos exclusivos para alimentos saudáveis, gerenciar a autenticação de usuários e até participar de ações sociais por meio da página de doação de alimentos.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+O sistema foi construído com Vite + React para garantir alta performance e carregamento rápido, e estilizado com Tailwind CSS para um design limpo e responsivo.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ✨ Funcionalidades
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# 🛒 CRUD de Produtos
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Adicione, edite, remova e visualize produtos de forma simples e eficiente.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# 🥗 Desconto Automático para Itens Saudáveis
+
+Regras de desconto inteligentes para incentivar hábitos alimentares mais saudáveis.
+
+# 🔒 Autenticação de Usuário
+
+Controle de acesso seguro com autenticação JWT e proteção de rotas.
+
+# 🤝 Página de Doação de Alimentos
+
+Ferramenta para registrar e incentivar ações solidárias.
+
+# 📱 Interface Responsiva
+
+Layout otimizado para desktops, tablets e smartphones.
+
+# 🛠️ Tecnologias Utilizadas
+Tecnologia	Uso no Projeto
+React	Construção da interface de usuário
+Vite	Build rápido e otimizado
+Tailwind CSS	Estilização moderna e responsiva
+React Router Dom 	Gerenciamento de rotas
+Axios	Requisições HTTP para a API
+JWT	Autenticação e autorização de usuários
+# 🚀 Como Rodar o Projeto
+Pré-requisitos
+
+Node.js (versão LTS recomendada)
+
+npm ou yarn
+
+Passos de Instalação
+# 1. Clonar o repositório
+git clone https://github.com/Grupo-5-Generation/delivery-frontend.git
+
+# 2. Acessar o diretório
+cd delivery-frontend
+
+# 3. Instalar as dependências
+npm install
+# ou
+yarn install
+
+# 4. Rodar em modo desenvolvimento
+npm run dev
+# ou
+yarn dev
+
+# 5. Acessar no navegador
+http://localhost:5173
+
+⚙️ Configuração de Ambiente
+
+Crie um arquivo .env na raiz do projeto com as seguintes variáveis:
+
+VITE_API_URL=http://localhost:5173
+
+
+## 📂 Estrutura de Pastas
+src/
+ ├── assets/         # Imagens e ícones
+ ├── components/     # Componentes reutilizáveis
+ ├── pages/          # Páginas do sistema
+ ├── routes/         # Configuração de rotas
+ ├── services/       # Comunicação com API e autenticação
+ ├── styles/         # Configuração do Tailwind e estilos globais
+ ├── App.jsx         # Componente principal
+ └── main.jsx        # Ponto de entrada da aplicação
+
+
+## | Nome              | GitHub | LinkedIn |
+|-------------------|--------|----------|
+| Mariana Oliveira  | [maridevdata](https://github.com/maridevdata) | [LinkedIn](https://www.linkedin.com/in/mariana-luisa) |
+| Andressa Muniz    | [Munnizdev](https://github.com/Munnizdev) | [LinkedIn](https://www.linkedin.com/in/andressa-muniz-2a7714146) |
+| Mateus Camargo    | [mateuscamargo](https://github.com/mateuscamargo) | [LinkedIn](https://www.linkedin.com/in/mateuscamargolima/) |
+| Douglas Ferreira  | [dgsferreira](https://github.com/dgsferreira) | [LinkedIn](https://www.linkedin.com/in/douglas-casetta-ferreira-168334241) |
+| Giulia Barreto    | [giubarreto](https://github.com/giubarreto) | [LinkedIn](https://www.linkedin.com/in/giulia-barreto-849a612b0) |
+| Ysabella Santos   | [ysabellax](https://github.com/ysabellax) | [LinkedIn](https://www.linkedin.com/in/ysa-santos) |
+| Giovanna Colombara| [giovannabreinack](https://github.com/giovannabreinack) | [LinkedIn](https://www.linkedin.com/in/giovanna-colombara/) |
