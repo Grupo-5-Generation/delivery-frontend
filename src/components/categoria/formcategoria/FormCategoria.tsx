@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useContext, useEffect, useState, type ChangeEvent } from "react";
 import { RotatingLines } from "react-loader-spinner";
 import { useNavigate, useParams } from "react-router-dom";
@@ -94,10 +95,21 @@ function FormCategoria() {
       <div className="max-w-7xl mx-auto px-4 py-6" >
         <div className="place-items-center font-bold bg-[#434522]/30 py-30 m-30 rounded-2xl">
         <form className="flex justify-center items-center flex-col w-1/2 gap-4" onSubmit={gerarNovaCategoria}>
-      <h1 className="text-[#473e31] text-5xl ">
+      <h1 className="text-[#473e31] text-4xl ">
         {id === undefined ? "Cadastrar Categoria" : "Editar Categoria"}
       </h1>
 
+        <div className="flex flex-col text-[#473e31] w-full">
+          <label htmlFor="tipo">Tipo da Categoria</label>
+          <input
+            type="text"
+            placeholder="Descreva o tipo da sua Categoria"
+            name="tipo"
+            className="border-2 border-[#675947] bg-white rounded p-2"
+            value={categoria.tipo}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+          />
+        </div>
       
         <div className="flex flex-col text-[#473e31] w-full">
           <label htmlFor="descricao">Descrição da Categoria</label>
@@ -107,17 +119,6 @@ function FormCategoria() {
             name="descricao"
             className="border-2 border-[#675947] bg-white rounded p-2"
             value={categoria.descricao}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-          />
-        </div>
-        <div className="flex flex-col text-[#473e31] w-full">
-          <label htmlFor="tipo">Tipo da Categoria</label>
-          <input
-            type="text"
-            placeholder="Descreva o tipo da sua Categoria"
-            name="tipo"
-            className="border-2 border-[#675947] bg-white rounded p-2"
-            value={categoria.tipo}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
         </div>

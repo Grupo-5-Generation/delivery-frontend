@@ -32,7 +32,7 @@ function Home() {
         <div className="max-w-3xl h-100 max-h-1/2 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pb-26">
          
           {/* Card 1 */}
-          <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center">
+          <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center hover:opacity-55">
             <img
               src="https://ik.imagekit.io/maridevdata/Foto%20Saudavel.jpeg?updatedAt=1755025581337"
               alt="Saudável"
@@ -45,7 +45,7 @@ function Home() {
           </div>
 
            {/* Card 2 */}
-          <div className="bg-[#7f6748] rounded-lg p-2 shadow-lg text-white flex flex-col items-center">
+          <div className="bg-[#7f6748] rounded-lg p-2 shadow-lg text-white flex flex-col items-center hover:opacity-55">
             <img
               src="https://ik.imagekit.io/maridevdata/Prato%20Saudavel2.jpg?updatedAt=1755026274300"
               alt="Sofisticada"
@@ -58,7 +58,7 @@ function Home() {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center">
+          <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center hover:opacity-55">
             <img
               src="https://ik.imagekit.io/maridevdata/Prato%20Saboroso.jpeg?updatedAt=1755025581293"
               alt="Saborosa"

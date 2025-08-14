@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react";
 import { FaCheck, FaXmark } from "react-icons/fa6";
 import { Link } from "react-router-dom";
