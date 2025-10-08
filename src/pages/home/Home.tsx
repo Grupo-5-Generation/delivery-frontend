@@ -8,20 +8,23 @@ function Home() {
       </div>
 
       {/* Seção 2 - Nossa História */}
-      <div className="flex justify-center flex-col text-center p-5">
-        <h1 className="text-4xl text-[#434522] font-bold my-5 leading-relaxed">
-          Nossa História
-        </h1>
-        <p className="mx-10 text-2xl text-balance">
-          Fundado em 2025, o Terminal Gourmet nasceu do sonho de levar comida
-          saborosa, saudável e preparada com carinho para o dia a dia corrido
-          das pessoas. Tudo começou na cozinha da nossa família, onde cada
-          receita era feita com ingredientes frescos, selecionados e temperos
-          que carregam memórias afetivas. Hoje, mantemos a mesma essência:
-          oferecer pratos com qualidade, entrega rápida e um toque especial que
-          faz cada refeição ser um momento único.
-        </p>
-      </div>
+      
+      <section id="Sobre" className="scroll">
+        <div className="flex justify-center flex-col text-center p-5">
+          <h1 className="text-4xl text-[#434522] font-bold my-5 leading-relaxed">
+            Nossa História
+          </h1>
+          <p className="mx-10 text-2xl text-balance">
+            Fundado em 2025, o Terminal Gourmet nasceu do sonho de levar comida
+            saborosa, saudável e preparada com carinho para o dia a dia corrido
+            das pessoas. Tudo começou na cozinha da nossa família, onde cada
+            receita era feita com ingredientes frescos, selecionados e temperos
+            que carregam memórias afetivas. Hoje, mantemos a mesma essência:
+            oferecer pratos com qualidade, entrega rápida e um toque especial que
+            faz cada refeição ser um momento único.
+          </p>
+        </div>
+      </section>
 
       {/* Seção 3 - Cards */}
       <div className="p-15">
@@ -113,62 +116,64 @@ function Home() {
       </div>
 
       {/* Seção 5 - Nossos Clientes */}
-      <div className="w-7xl h-5xl mx-auto py-45 text-[#434522]">
+
+      
+      <div className="w-5/7 h-100 mx-auto mt-20 text-[#434522] p-4">
         <h2 className="text-4xl font-bold text-center mb-8">Nossos clientes</h2>
-        <div className="grid grid-cols-5 gap-4 pl-55">
-          {/* Cliente 1 */}
-          <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center hover:opacity-55">
-            <img
-              src="https://ik.imagekit.io/vtdzeofuq/douglas2.jpg?updatedAt=1755173688168"
-              alt="Imagem cliente 1"
-              className="w-40 h-40 rounded-full object-cover mb-4"
-            />
-            <h2 className="text-lg font-semibold mb-2">Douglas</h2>
-            <p className="text-1xl font-semibold text-gray-200 text-center">
-              "Cada prato é uma obra de arte no sabor e na apresentação. Uma experiência gastronômica inesquecível"
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 text-white">
+
+          {/*Cliente 1*/}
+          <div className="border rounded-lg p-6 bg-[#7f6748] shadow-2xl">
+            <p className="text-xl">"Cada prato é uma obra de arte no sabor e na apresentação."</p>
+            <div className="flex gap-4 items-center mt-4">
+              <img src="https://ik.imagekit.io/vtdzeofuq/douglas2.jpg?updatedAt=1755173688168" alt="" className="h-24 w-24 rounded-full" /> 
+              <div>
+                <p className="font-bold text-xl">Douglas Ferreira</p>
+                <p className="text-lg">Cliente Fiel</p>
+              </div>
+            </div>
           </div>
 
-          {/* Cliente 2 */}
-          <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center hover:opacity-55">
-            <img
-              src="https://ik.imagekit.io/maridevdata/Image%20(2).jpg?updatedAt=1753313747315"
-              alt="Imagem cliente 2"
-              className="w-40 h-40 rounded-full object-cover mb-4"
-            />
-            <h2 className="text-lg font-semibold mb-2">Mariana</h2>
-            <p className="text-1xl font-semibold text-gray-200 text-center">
-              "Finalmente encontrei um lugar onde comer saudável é também uma experiência deliciosa e cheia de sabor."
-            </p>
+          {/*Cliente 2*/}
+          <div className="border rounded-lg p-6 bg-[#7f6748] shadow-2xl">
+            <p className="text-xl">"Uma experiência deliciosa e cheia de sabor."</p>
+            <div className="flex gap-4 items-center mt-4">
+              <img src="https://ik.imagekit.io/maridevdata/Image%20(2).jpg?updatedAt=1753313747315" alt="" className="h-24 w-24 rounded-full object-cover" /> 
+              <div>
+                <p className="font-bold text-xl">Mariana</p>
+                <p className="text-lg">Cliente Fiel</p>
+              </div>
+            </div>
           </div>
 
-          {/* Cliente 3 */}
-          <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center hover:opacity-55">
-            <img
-              src="https://i.ibb.co/PZs90f88/Whats-App-Image-2025-08-14-at-09-40-48.jpg"
-              alt="Imagem cliente 3"
-              className="w-40 h-40 rounded-full object-cover mb-4"
-            />
-            <h2 className="text-lg font-semibold mb-2">Andressa</h2>
-            <p className="text-1xl font-semibold text-gray-200 text-center">
-              "Os temperos, as combinações e a textura… tudo é pensado nos mínimos detalhes. Simplesmente impecável!"
-            </p>
+          {/*Cliente 3*/}
+          <div className="border rounded-lg p-6 bg-[#7f6748] shadow-2xl">
+            <p className="text-xl">"Tudo é pensado nos mínimos detalhes. Simplesmente impecável!"</p>
+            <div className="flex gap-4 items-center mt-4">
+              <img src="https://ik.imagekit.io/vtdzeofuq/giu.jpg?updatedAt=1759950950707" alt="" className="h-24 w-24 rounded-full object-cover" /> 
+              <div>
+                <p className="font-bold text-xl">Giulia</p>
+                <p className="text-lg">Cliente Fiel</p>
+              </div>
+            </div>
           </div>
 
-          {/* Cliente 4 */}
-          <div className="bg-[#7f6748] rounded-lg shadow-lg p-2 text-white flex flex-col items-center hover:opacity-55">
-            <img
-              src="https://ik.imagekit.io/vtdzeofuq/fotoYsabella.jpeg?updatedAt=1755175639233"
-              alt="Imagem cliente 4"
-              className="w-40 h-40 rounded-full object-cover mb-4"
-            />
-            <h2 className="text-lg font-semibold mb-2">Ysabella</h2>
-            <p className="text-1xl font-semibold text-gray-200 text-center">
-              "O site é lindo e fácil de navegar, já dá água na boca antes mesmo de fazer o pedido."
-            </p>
+          {/*Cliente 4*/}
+          <div className="border rounded-lg p-6 bg-[#7f6748] shadow-2xl">
+            <p className="text-xl">"Já dá água na boca antes mesmo de fazer o pedido."</p>
+            <div className="flex gap-4 items-center mt-4">
+              <img src="https://ik.imagekit.io/vtdzeofuq/fotoYsabella.jpeg?updatedAt=1755175639233" alt="" className="h-24 w-24 rounded-full object-cover" /> 
+              <div>
+                <p className="font-bold text-xl">Ysabella Santos</p>
+                <p className="text-lg">Cliente Fiel</p>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
+
+      
     </>
   );
 }
