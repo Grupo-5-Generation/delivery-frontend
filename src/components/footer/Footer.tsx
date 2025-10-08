@@ -13,7 +13,7 @@ function Footer() {
               <GithubLogoIcon size={28} weight="bold" />
             </a>
           </div>
-          <p className="text-xl font-bold">Grupo 5 | {data}</p>
+          <p className="text-xl font-bold">Terminal Gourmet | {data}</p>
           <p></p>
         </div>
       </div>
