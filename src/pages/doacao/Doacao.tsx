@@ -1,40 +1,42 @@
 function Doacao() {
- 
   const locaisDoacao = [
     {
       nome: "Instituto Alimentar",
-      imagem: "https://ik.imagekit.io/maridevdata/Instituto%20Alimentar.jpeg?updatedAt=1755123007021",
+      imagem:
+        "https://ik.imagekit.io/maridevdata/Instituto%20Alimentar.jpeg?updatedAt=1755123007021",
       endereco: "https://maps.app.goo.gl/5qQPuzcUCRm8YnSY9",
     },
     {
       nome: "SP Invisível",
-      imagem: "https://ik.imagekit.io/maridevdata/Logo%20SP%20invisivel%20-%20ok.png?updatedAt=1755123071763",
-      endereco:
-        "https://maps.app.goo.gl/ZKEisSYzPuGYrMFCA",
+      imagem:
+        "https://ik.imagekit.io/maridevdata/Logo%20SP%20invisivel%20-%20ok.png?updatedAt=1755123071763",
+      endereco: "https://maps.app.goo.gl/ZKEisSYzPuGYrMFCA",
     },
     {
       nome: "Amigos do Bem",
-      imagem: "https://ik.imagekit.io/maridevdata/Amigos%20do%20Bem.jpeg?updatedAt=1755123007075",
-      endereco:
-        "https://maps.app.goo.gl/5UogH9RyVee82hhCA",
+      imagem:
+        "https://ik.imagekit.io/maridevdata/Amigos%20do%20Bem.jpeg?updatedAt=1755123007075",
+      endereco: "https://maps.app.goo.gl/5UogH9RyVee82hhCA",
     },
   ];
 
   return (
     <div className="flex flex-col items-center mx-4">
+      {/* Banner */}
       <div className="container mx-auto my-4 rounded-2xl overflow-hidden">
         <img
-          className="w-full object-cover h-150 border-white"
+          className="w-full object-cover h-[400px] md:h-[500px] lg:h-[600px] border-white"
           src="https://ik.imagekit.io/maridevdata/Doa%C3%A7%C3%A3o%20de%20Alimentos.png?updatedAt=1755121848344"
-          alt="Capa do Perfil"
+          alt="Capa Doação"
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+      {/* Cards de locais */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
         {locaisDoacao.map((local, index) => (
           <div
             key={index}
-            className="bg-white h-80 w-60 rounded-xl shadow-lg overflow-hidden"
+            className="bg-white h-auto w-full max-w-[260px] rounded-xl shadow-lg overflow-hidden mx-auto hover:scale-[1.02] transition-transform"
           >
             <img
               src={local.imagem}
@@ -42,7 +44,7 @@ function Doacao() {
               className="w-full h-48 object-cover"
             />
             <div className="p-4 flex flex-col items-center">
-              <h3 className="text-xl font-bold text-[#434522] mb-2">
+              <h3 className="text-xl font-bold text-[#434522] mb-2 text-center">
                 {local.nome}
               </h3>
               <a

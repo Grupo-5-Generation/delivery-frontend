@@ -6,6 +6,7 @@ function Footer() {
     <>
       
 
+
     <footer className="shadow-sm p-2 bg-[#434522]">
         <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
           <span className="text-sm text-white sm:text-center font-bold"><a href="https://github.com/Grupo-5-Generation/delivery-frontend">Terminal Gourmet</a>
@@ -24,6 +25,14 @@ function Footer() {
                 <a href="#Sobre" className="hover:underline">Sobre Nós</a>
             </li>
         </ul>
+
+            <a href="https://github.com/Grupo-5-Generation" target="_blank">
+              <GithubLogoIcon size={28} weight="bold" />
+            </a>
+          </div>
+          <p className="text-xl font-bold">Terminal Gourmet | {data}</p>
+          <p></p>
+
         </div>
     </footer>
 
