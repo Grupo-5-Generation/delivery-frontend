@@ -1,168 +1,170 @@
 function Home() {
   return (
     <>
-      {/* Seção 1 - Banner */}
-      <div className="max-w-screen overflow-hidden">
-        <div className="bg-[url(https://ik.imagekit.io/maridevdata/Terminal%20Gourmet.png?updatedAt=1755023249713)] bg-no-repeat bg-cover min-h-[70vh] shadow opacity-90 animate-[zoomIn_3s_ease_forwards]"></div>
-      </div>
+      <main className="min-h-[calc(100vh-80px)] flex flex-col justify-start">
+        {/* Seção 1 - Banner */}
+        <div className="max-w-screen overflow-hidden">
+          <div className="bg-[url(https://ik.imagekit.io/maridevdata/Terminal%20Gourmet.png?updatedAt=1755023249713)] bg-no-repeat bg-cover min-h-[70vh] shadow opacity-90 animate-[zoomIn_3s_ease_forwards]"></div>
+        </div>
 
-      {/* Seção 2 - Nossa História */}
-      <section id="Sobre" className="scroll mt-10 mb-10">
-        <div className="flex justify-center flex-col text-center p-5">
-          <h1 className="text-4xl md:text-4xl text-[#434522] font-bold my-5 leading-relaxed">
-            Nossa História
+        {/* Seção 2 - Nossa História */}
+        <section id="Sobre" className="scroll mt-10 mb-10">
+          <div className="flex justify-center flex-col text-center p-5">
+            <h1 className="text-4xl md:text-4xl text-[#434522] font-bold my-5 leading-relaxed">
+              Nossa História
+            </h1>
+            <p className="mx-4 md:mx-10 text-lg md:text-2xl text-balance">
+              Fundado em 2025, o Terminal Gourmet nasceu do sonho de levar comida
+              saborosa, saudável e preparada com carinho para o dia a dia corrido
+              das pessoas. Tudo começou na cozinha da nossa família, onde cada
+              receita era feita com ingredientes frescos, selecionados e temperos
+              que carregam memórias afetivas. Hoje, mantemos a mesma essência:
+              oferecer pratos com qualidade, entrega rápida e um toque especial que
+              faz cada refeição ser um momento único.
+            </p>
+          </div>
+        </section>
+
+        {/* Seção 3 - Cards */}
+        <div className="p-5 md:p-15 mb-20">
+          <h1 className="text-3xl md:text-4xl text-center my-10 text-[#434522] font-bold pb-8">
+            Conheça Nossa Culinária
           </h1>
-          <p className="mx-4 md:mx-10 text-lg md:text-2xl text-balance">
-            Fundado em 2025, o Terminal Gourmet nasceu do sonho de levar comida
-            saborosa, saudável e preparada com carinho para o dia a dia corrido
-            das pessoas. Tudo começou na cozinha da nossa família, onde cada
-            receita era feita com ingredientes frescos, selecionados e temperos
-            que carregam memórias afetivas. Hoje, mantemos a mesma essência:
-            oferecer pratos com qualidade, entrega rápida e um toque especial que
-            faz cada refeição ser um momento único.
-          </p>
-        </div>
-      </section>
 
-      {/* Seção 3 - Cards */}
-      <div className="p-5 md:p-15 mb-20">
-        <h1 className="text-3xl md:text-4xl text-center my-10 text-[#434522] font-bold pb-8">
-          Conheça Nossa Culinária
-        </h1>
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Card 1 */}
+            <div className="bg-[#7f6748] rounded-lg shadow-lg p-4 text-white flex flex-col items-center hover:opacity-55 h-auto">
+              <img
+                src="https://ik.imagekit.io/maridevdata/Foto%20Saudavel.jpeg?updatedAt=1755025581337"
+                alt="Saudável"
+                className="w-full md:w-60 h-40 rounded-md mb-4 object-cover"
+              />
+              <h2 className="text-lg font-semibold mb-2">Saudável</h2>
+              <p className="text-base text-white text-center">
+                Receitas equilibradas, frescas e nutritivas, preparadas para cuidar do seu corpo sem abrir mão do prazer de uma boa refeição.
+              </p>
+            </div>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Card 1 */}
-          <div className="bg-[#7f6748] rounded-lg shadow-lg p-4 text-white flex flex-col items-center hover:opacity-55 h-auto">
-            <img
-              src="https://ik.imagekit.io/maridevdata/Foto%20Saudavel.jpeg?updatedAt=1755025581337"
-              alt="Saudável"
-              className="w-full md:w-60 h-40 rounded-md mb-4 object-cover"
-            />
-            <h2 className="text-lg font-semibold mb-2">Saudável</h2>
-            <p className="text-base text-white text-center">
-              Receitas equilibradas, frescas e nutritivas, preparadas para cuidar do seu corpo sem abrir mão do prazer de uma boa refeição.
-            </p>
-          </div>
+            {/* Card 2 */}
+            <div className="bg-[#7f6748] rounded-lg p-4 shadow-lg text-white flex flex-col items-center hover:opacity-55 h-auto">
+              <img
+                src="https://ik.imagekit.io/maridevdata/Prato%20Saudavel2.jpg?updatedAt=1755026274300"
+                alt="Sofisticada"
+                className="w-full md:w-60 h-40 rounded-md mb-4 object-cover"
+              />
+              <h2 className="text-lg font-semibold mb-2">Sofisticada</h2>
+              <p className="text-base text-white text-center">
+                Cada prato é preparado com ingredientes selecionados e técnicas refinadas, trazendo à mesa uma experiência gastronômica única.
+              </p>
+            </div>
 
-          {/* Card 2 */}
-          <div className="bg-[#7f6748] rounded-lg p-4 shadow-lg text-white flex flex-col items-center hover:opacity-55 h-auto">
-            <img
-              src="https://ik.imagekit.io/maridevdata/Prato%20Saudavel2.jpg?updatedAt=1755026274300"
-              alt="Sofisticada"
-              className="w-full md:w-60 h-40 rounded-md mb-4 object-cover"
-            />
-            <h2 className="text-lg font-semibold mb-2">Sofisticada</h2>
-            <p className="text-base text-white text-center">
-              Cada prato é preparado com ingredientes selecionados e técnicas refinadas, trazendo à mesa uma experiência gastronômica única.
-            </p>
-          </div>
-
-          {/* Card 3 */}
-          <div className="bg-[#7f6748] rounded-lg shadow-lg p-4 text-white flex flex-col items-center hover:opacity-55 h-auto">
-            <img
-              src="https://ik.imagekit.io/maridevdata/Prato%20Saboroso.jpeg?updatedAt=1755025581293"
-              alt="Saborosa"
-              className="w-full md:w-60 h-40 rounded-md mb-4 object-cover"
-            />
-            <h2 className="text-lg font-semibold mb-2">Saborosa</h2>
-            <p className="text-base text-white text-center">
-              Sabores ricos e equilibrados, criados com técnicas refinadas para proporcionar uma experiência memorável.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Seção 4 - Texto, imagem e clientes */}
-      <div className="flex flex-col md:flex-row justify-center items-center md:gap-50 gap-8 py-18 bg-[#434522]/30 px-4 mb-20">
-        {/* Texto */}
-        <div className="my-auto space-y-6 text-center md:text-left">
-          <p className="text-[#434522] text-4xl md:text-6xl font-bold py-6 md:py-10">Faça seu pedido</p>
-
-          <div>
-            <p className="text-2xl md:text-3xl text-[#434522] font-bold">Reservas</p>
-            <span className="text-[#434522] text-xl md:text-2xl">(11) 99999-9999</span>
-          </div>
-          <div>
-            <p className="text-2xl md:text-3xl text-[#434522] font-bold">Delivery</p>
-            <span className="text-[#434522] text-xl md:text-2xl">https://terminalgourmet.netlify.app/</span>
-          </div>
-          <div>
-            <p className="text-2xl md:text-3xl text-[#434522] font-bold">Como chegar</p>
-            <iframe
-              title="Mapa Terminal Gourmet"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.1234567890!2d-46.6531234!3d-23.5645678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b123456789%3A0xabcdef123456789!2sRua Teodoro Sampaio, 1629, Pinheiros, São Paulo - SP, CEP 05405-150!5e0!3m2!1spt-BR!2sbr!4v1691913600000!5m2!1spt-BR!2sbr"
-              width="100%"
-              height="200"
-              style={{ border: 0 }}
-              allowFullScreen={false}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="rounded-lg mt-4"
-            ></iframe>
+            {/* Card 3 */}
+            <div className="bg-[#7f6748] rounded-lg shadow-lg p-4 text-white flex flex-col items-center hover:opacity-55 h-auto">
+              <img
+                src="https://ik.imagekit.io/maridevdata/Prato%20Saboroso.jpeg?updatedAt=1755025581293"
+                alt="Saborosa"
+                className="w-full md:w-60 h-40 rounded-md mb-4 object-cover"
+              />
+              <h2 className="text-lg font-semibold mb-2">Saborosa</h2>
+              <p className="text-base text-white text-center">
+                Sabores ricos e equilibrados, criados com técnicas refinadas para proporcionar uma experiência memorável.
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Imagem */}
-        <img
-          src="https://ik.imagekit.io/maridevdata/Restaurante%20Home.jpg?updatedAt=1755106030159"
-          alt="Foto da div"
-          className="h-[40vh] md:h-[65vh] mx-auto md:mx-10 rounded-xl object-cover"
-        />
-      </div>
+        {/* Seção 4 - Texto, imagem e clientes */}
+        <div className="flex flex-col md:flex-row justify-center items-center md:gap-50 gap-8 py-18 bg-[#434522]/30 px-4 mb-20">
+          {/* Texto */}
+          <div className="my-auto space-y-6 text-center md:text-left">
+            <p className="text-[#434522] text-4xl md:text-6xl font-bold py-6 md:py-10">Faça seu pedido</p>
 
-      {/* Seção 5 - Nossos Clientes */}
-      <div className="w-full md:w-5/7 h-100 mx-auto mt-20 mb-20 text-[#434522] p-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Nossos clientes</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-white">
-          {/*Cliente 1*/}
-          <div className="border rounded-lg p-6 bg-[#7f6748] shadow-2xl text-center md:text-left">
-            <p className="text-lg md:text-xl">"Cada prato é uma obra de arte no sabor."</p>
-            <div className="flex flex-col md:flex-row gap-4 items-center mt-4">
-              <img src="https://ik.imagekit.io/vtdzeofuq/douglas2.jpg?updatedAt=1755173688168" alt="" className="h-24 w-24 rounded-full mb-4" /> 
-              <div>
-                <p className="font-bold text-xl mb-2">Douglas Ferreira</p>
-                <p className="text-lg">Cliente Fiel</p>
-              </div>
+            <div>
+              <p className="text-2xl md:text-3xl text-[#434522] font-bold">Reservas</p>
+              <span className="text-[#434522] text-xl md:text-2xl">(11) 99999-9999</span>
+            </div>
+            <div>
+              <p className="text-2xl md:text-3xl text-[#434522] font-bold">Delivery</p>
+              <span className="text-[#434522] text-xl md:text-2xl">https://terminalgourmet.netlify.app/</span>
+            </div>
+            <div>
+              <p className="text-2xl md:text-3xl text-[#434522] font-bold">Como chegar</p>
+              <iframe
+                title="Mapa Terminal Gourmet"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.1234567890!2d-46.6531234!3d-23.5645678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b123456789%3A0xabcdef123456789!2sRua Teodoro Sampaio, 1629, Pinheiros, São Paulo - SP, CEP 05405-150!5e0!3m2!1spt-BR!2sbr!4v1691913600000!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="200"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg mt-4"
+              ></iframe>
             </div>
           </div>
 
-          {/*Cliente 2*/}
-          <div className="border rounded-lg p-6 bg-[#7f6748] shadow-2xl text-center md:text-left">
-            <p className="text-lg md:text-xl">"Uma experiência deliciosa e cheia de sabor."</p>
-            <div className="flex flex-col md:flex-row gap-4 items-center mt-4">
-              <img src="https://ik.imagekit.io/maridevdata/Image%20(2).jpg?updatedAt=1753313747315" alt="" className="h-24 w-24 rounded-full object-cover mb-4" /> 
-              <div>
-                <p className="font-bold text-xl mb-2">Mariana</p>
-                <p className="text-lg">Cliente Fiel</p>
+          {/* Imagem */}
+          <img
+            src="https://ik.imagekit.io/maridevdata/Restaurante%20Home.jpg?updatedAt=1755106030159"
+            alt="Foto da div"
+            className="h-[40vh] md:h-[65vh] mx-auto md:mx-10 rounded-xl object-cover"
+          />
+        </div>
+
+        {/* Seção 5 - Nossos Clientes */}
+        <div className="w-full md:w-5/7 min-h-100 mx-auto mt-20 text-[#434522] p-4 mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Nossos clientes</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-white">
+            {/*Cliente 1*/}
+            <div className="border rounded-lg p-6 bg-[#7f6748] shadow-2xl text-center md:text-left">
+              <p className="text-lg md:text-xl">"Cada prato é uma obra de arte no sabor."</p>
+              <div className="flex flex-col md:flex-row gap-4 items-center mt-4">
+                <img src="https://ik.imagekit.io/vtdzeofuq/douglas2.jpg?updatedAt=1755173688168" alt="" className="h-24 w-24 rounded-full mb-4" /> 
+                <div>
+                  <p className="font-bold text-xl mb-2">Douglas Ferreira</p>
+                  <p className="text-lg">Cliente Fiel</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/*Cliente 3*/}
-          <div className="border rounded-lg p-6 bg-[#7f6748] shadow-2xl text-center md:text-left">
-            <p className="text-lg md:text-xl">"Tudo é pensado nos mínimos detalhes!"</p>
-            <div className="flex flex-col md:flex-row gap-4 items-center mt-4">
-              <img src="https://ik.imagekit.io/vtdzeofuq/giu.jpg?updatedAt=1759950950707" alt="" className="h-24 w-24 rounded-full object-cover" /> 
-              <div>
-                <p className="font-bold text-xl">Giulia</p>
-                <p className="text-lg">Cliente Fiel</p>
+            {/*Cliente 2*/}
+            <div className="border rounded-lg p-6 bg-[#7f6748] shadow-2xl text-center md:text-left">
+              <p className="text-lg md:text-xl">"Uma experiência deliciosa e cheia de sabor."</p>
+              <div className="flex flex-col md:flex-row gap-4 items-center mt-4">
+                <img src="https://ik.imagekit.io/maridevdata/Image%20(2).jpg?updatedAt=1753313747315" alt="" className="h-24 w-24 rounded-full object-cover mb-4" /> 
+                <div>
+                  <p className="font-bold text-xl mb-2">Mariana</p>
+                  <p className="text-lg">Cliente Fiel</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/*Cliente 4*/}
-          <div className="border rounded-lg p-6 bg-[#7f6748] shadow-2xl text-center md:text-left">
-            <p className="text-lg md:text-xl">"Já dá água na boca antes mesmo de fazer o pedido."</p>
-            <div className="flex flex-col md:flex-row gap-4 items-center mt-4">
-              <img src="https://ik.imagekit.io/vtdzeofuq/fotoYsabella.jpeg?updatedAt=1755175639233" alt="" className="h-24 w-24 rounded-full object-cover" /> 
-              <div>
-                <p className="font-bold text-xl">Ysabella Santos</p>
-                <p className="text-lg">Cliente Fiel</p>
+            {/*Cliente 3*/}
+            <div className="border rounded-lg p-6 bg-[#7f6748] shadow-2xl text-center md:text-left">
+              <p className="text-lg md:text-xl">"Tudo é pensado nos mínimos detalhes!"</p>
+              <div className="flex flex-col md:flex-row gap-4 items-center mt-4">
+                <img src="https://ik.imagekit.io/vtdzeofuq/giu.jpg?updatedAt=1759950950707" alt="" className="h-24 w-24 rounded-full object-cover" /> 
+                <div>
+                  <p className="font-bold text-xl">Giulia</p>
+                  <p className="text-lg">Cliente Fiel</p>
+                </div>
+              </div>
+            </div>
+
+            {/*Cliente 4*/}
+            <div className="border rounded-lg p-6 bg-[#7f6748] shadow-2xl text-center md:text-left">
+              <p className="text-lg md:text-xl">"Já dá água na boca antes mesmo de fazer o pedido."</p>
+              <div className="flex flex-col md:flex-row gap-4 items-center mt-4">
+                <img src="https://ik.imagekit.io/vtdzeofuq/fotoYsabella.jpeg?updatedAt=1755175639233" alt="" className="h-24 w-24 rounded-full object-cover" /> 
+                <div>
+                  <p className="font-bold text-xl">Ysabella Santos</p>
+                  <p className="text-lg">Cliente Fiel</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 }
