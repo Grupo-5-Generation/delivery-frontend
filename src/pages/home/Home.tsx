@@ -128,6 +128,7 @@ function Home() {
             </div>
 
             {/*Cliente 2*/}
+            
             <div className="border rounded-lg p-6 bg-[#7f6748] shadow-2xl text-center md:text-left">
               <p className="text-lg md:text-xl">"Uma experiência deliciosa e cheia de sabor."</p>
               <div className="flex flex-col md:flex-row gap-4 items-center mt-4">
