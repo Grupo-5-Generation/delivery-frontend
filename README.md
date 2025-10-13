@@ -100,7 +100,7 @@ VITE_API_URL=http://localhost:5173
 ---
 
 
-✨ Desenvolvido com dedicação pelo Grupo 5 – Generation Brasil
+✨ Desenvolvido com dedicação pelo Grupo 5 – Generation Brasil.
 
 
 ---
