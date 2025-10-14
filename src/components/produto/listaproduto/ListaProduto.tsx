@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useContext, useEffect, useState } from "react";
@@ -40,6 +39,7 @@ function ListaProduto() {
     buscarProduto();
   }, []);
 
+  // Função para atualizar um produto específico na lista
   function atualizarProdutoAtualizado(produtoAtualizado: Produto) {
     setProduto((prev) =>
       prev.map((p) => (p.id === produtoAtualizado.id ? produtoAtualizado : p))
@@ -47,7 +47,7 @@ function ListaProduto() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-6 text-green-950">
+    <div className="max-w-7xl mx-auto px-4 py-6 text-green-950 ">
       {produto.length === 0 ? (
         <div className="flex items-center justify-center min-h-[300px]">
           <div className="w-48 h-48">
@@ -70,19 +70,34 @@ function ListaProduto() {
               Inserir produto
             </Link>
           </div>
-
-          <div className="bg-white shadow w-full overflow-x-auto">
-            <table className="min-w-[780px] w-full text-sm text-left text-gray-700">
-              <thead className="bg-[#ac906c] text-white">
+          <div className="bg-white shadow w-full ">
+            <table className="w-full text-sm text-left text-gray-700 ">
+              <thead className="bg-[#ac906c] text-white ">
                 <tr>
-                  <th scope="col" className="px-4 py-3">Ações</th>
-                  <th scope="col" className="px-4 py-3">Nome</th>
-                  <th scope="col" className="px-4 py-3">Quantidade</th>
-                  <th scope="col" className="px-4 py-3">Preço Atual</th>
-                  <th scope="col" className="px-4 py-3">Desconto</th>
-                  <th scope="col" className="px-4 py-3">Preço com desconto</th>
-                  <th scope="col" className="px-4 py-3">Categoria</th>
-                  <th scope="col" className="px-4 py-3">Status</th>
+                  <th scope="col" className="px-4 py-3">
+                    Ações
+                  </th>
+                  <th scope="col" className="px-4 py-3">
+                    Nome
+                  </th>
+                  <th scope="col" className="px-4 py-3">
+                    Quantidade
+                  </th>
+                  <th scope="col" className="px-4 py-3">
+                    Preço Atual
+                  </th>
+                  <th scope="col" className="px-4 py-3">
+                    Desconto
+                  </th>
+                  <th scope="col" className="px-4 py-3">
+                    Preço com desconto
+                  </th>
+                  <th scope="col" className="px-4 py-3">
+                    Categoria
+                  </th>
+                  <th scope="col" className="px-4 py-3">
+                    Status
+                  </th>
                 </tr>
               </thead>
               <tbody>

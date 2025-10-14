@@ -1,17 +1,4 @@
 .popup-content {
-  border-radius: 1rem;
-  padding: 2rem;
-  max-width: 600px;
-  width: 90%;
-  margin: auto;
-  background-color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsividade abaixo de 780px */
-@media (max-width: 780px) {
-  .popup-content {
-    width: 95%;
-    padding: 1rem;
-  }
+    border-radius: 1rem;
+    padding-bottom: 2rem;
 }

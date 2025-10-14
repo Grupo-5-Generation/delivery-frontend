@@ -79,6 +79,9 @@ function MostrarProduto() {
           className="max-h-60 object-contain border rounded w-full sm:w-3/4 md:w-1/3"
         />
 
+
+        
+
         {/* Informações do produto */}
         <div className="flex flex-col text-[#473e31] gap-2 text-left w-full sm:w-3/4 md:w-2/3">
           <span className="font-semibold">
