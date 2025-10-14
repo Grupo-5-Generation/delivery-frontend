@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useContext, useEffect, useState } from "react";
